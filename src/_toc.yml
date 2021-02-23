@@ -1,0 +1,7 @@
+- file: titlepage
+
+- part: "Cosmic Strings"
+  chapters:
+    - file: cosmicstrings/01_cosmic_strings
+      sections:
+        - file: cosmicstrings/section_derivation

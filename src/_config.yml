@@ -1,0 +1,15 @@
+title: "Topological Defects"
+execute:
+  execute_notebooks: "off"
+
+repository:
+  url:  "https://github.com/dustpancake/topological-defects"
+
+only_build_toc_files: true
+
+latex:
+  latex_engine: xelatex 
+
+parse:
+  myst_enable_extensions:
+    - amsmath
