@@ -1,1 +1,5 @@
 src/_build
+.ipynb_checkpoints
+*.pyc
+venv
+.vscode

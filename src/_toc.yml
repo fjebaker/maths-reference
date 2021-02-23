@@ -1,6 +1,13 @@
 - file: titlepage
 
-- part: "Cosmic Strings"
+- part: "Prerequisites"
+  chapters:
+    - file: vectorspaces/vector-spaces
+      sections:
+        - file: vectorspaces/linear-transformations
+    - file: diff-geo/forms
+
+- part: "Cosmic strings"
   chapters:
     - file: cosmicstrings/01_cosmic_strings
       sections:
