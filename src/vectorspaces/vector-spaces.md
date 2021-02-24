@@ -98,7 +98,7 @@ See {doc}`linear-transformations` for more.
 ```
 ````
 
-That is to say $P$ is a linear transformation, with $\text{im}\ P = V$, $\text{ker}\ P = U$, and $P^2 = P$.
+That is to say $P$ is a linear transformation, with $\text{im}\, P = V$, $\text{ker}\, P = U$, and $P^2 = P$.
 
 $P$ is called the *projection* of $W$ onto $V$ along $U$.
 

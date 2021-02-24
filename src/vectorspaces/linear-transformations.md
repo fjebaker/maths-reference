@@ -7,7 +7,7 @@ For some $T \in \mathcal{L}(V, W)$ we associate two subspaces -- the *kernel* an
 Let $T : V \rightarrow W$ be a linear transformation. The kernel of $T$ is defined
 
 ```{math}
-\text{ker} \ T = \{ v \in V \ |\  T(v) = 0 \}
+\text{ker} \, T = \{ v \in V \ |\  T(v) = 0 \}
 ```
 
 
@@ -18,7 +18,7 @@ Let $T : V \rightarrow W$ be a linear transformation. The kernel of $T$ is defin
 Let $T : V \rightarrow W$ be a linear transformation. The image of $T$ is defined
 
 ```{math}
-\text{im} \ T = \{ T(v) \ |\ v \in V \}
+\text{im} \, T = \{ T(v) \ |\ v \in V \}
 ```
 
 ````
