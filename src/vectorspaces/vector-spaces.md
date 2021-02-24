@@ -2,6 +2,8 @@
 
 ## Subspace
 
+
+
 ## Direct sum
 Consider vector spaces $U, V \subset W$. We say $W$ is the *direct sum* of $U$ and $W$
 ```{math}
@@ -10,7 +12,7 @@ W = V \oplus U,
 if $W = V + U$, and $\{ 0 \} = V \cap U$.
 
 ```{admonition} Lemma
-:name: lemmasubspace
+:class: lemma
 
 Let $U, V \subset W$, then $W = V \oplus U$ *if and only if* for every $w \in W$ there exist unique vectors $v \in V$ and $u \in U$ such that $w = v + u$.
 ```
@@ -43,7 +45,9 @@ V^\ast := \{ \phi : V \rightarrow \mathbb{R}, \ \text{linear} \}.
 ````
 
 Denoting the bases of $V$ with $b_i$, then the basis of $V^\ast$ is $\beta^i$ defined by
+
 ```{math}
+:label: eq_basis
 \beta^i (b_j) := \delta^i_{\hphantom{i}j}.
 ```
 
@@ -63,20 +67,42 @@ The basis transformation on the dual basis is given by the inverse transpose of 
 \beta'^i := \sum_{j=1}^n \gamma^i_{\hphantom{j}i} \beta^j. 
 ```
 
+## Annihilator
+````{admonition} Definition: Annihilator of a vector space
+Let $U$ be a subet of a vector space $V$. The *annihilator* of $U$ is 
+```{math}
+U^0 := \{ \phi : V \rightarrow \mathbb{R} \ | \ \phi(u) = 0 \ \forall \ u \in U \}.
+```
+````
+As such, $V^0 \subset V^\ast$.
 
-### Dual transformation
+Let $b_i$ form a basis of $V$ for $i = 1, ..., n$ where $n = \text{dim} \, V$, and suppose the basis of $U$ consists of $b_i$ for $i = 1, ..., m < n$, with $m = \text{dim} \, U$. We may then consider the dual basis $\beta_i$ for $V^\ast$, such that
+```{math}
+\{ \beta_{m+1}, ..., \beta_{n} \} \subseteq U^0,
+```
+forms a basis for $U^0$.
+
+*NB:* from eq. {eq}`eq_basis`, any element of $\{ \beta_{m+1}, ..., \beta_{n} \}$ acting on any basis element of $U$ is $0$, asserting that $U^0$ is indeed the annihiliator.
+
+It follows that
+```{math}
+:label: eq_adim
+\text{dim} \, V = \text{dim} \, U + \text{dim} \, U^0.
+```
+
+
+## Dual transformation
 Let $T$ be a linear transformation between vector spaces $V \rightarrow W$. The dual transformation is then $T^\ast : W^\ast \rightarrow V^\ast$ . 
 
 ````{admonition} Definition: Dual transformation
 For some $T: V \rightarrow W$ the dual transformation $T^\ast : W^\ast \rightarrow V^\ast$ is defined by
 ```{math}
-T^\ast \omega := \omega \circ T, \ \forall \ \omega \in W^\ast.
+:label: eq_dualtrans
+T^\ast \omega := \omega \circ T, \ \ \forall \ \omega \in W^\ast.
 ```
 ````
 
-
 ````{margin} Notation
-:class: hint 
 This is sometimes written with parentheses
 ```{math}
 (T^\ast \omega , v)\, = (\omega ,  T v ).
@@ -88,17 +114,101 @@ The operation of $T^\ast$ is commonly termed the *adjoint*. For all $v \in V$ we
 (T^\ast \omega)\, v = \omega \, ( T v ).
 ```
 
+````{margin}
+```{seealso}
+See {doc}`linear-transformations` for more on kernels and images.
+```
+````
+
+
+````{admonition} Theorem: Matrix of dual transformation
+:class: theorem 
+
+Let $V$ and $W$ be vector spaces with bases defined. Let $A$ denote the matrix of $T: V \rightarrow W$, and $B$ be the matrix of the dual transformation $T^\ast: W^\ast \rightarrow V^\ast$. Then $B = A^\text{T}$.
+
+```{toggle}
+**Proof**:
+Starting from the definition of $T^\ast \omega$ for any $\omega \in W^\ast$
+
+$$
+(T^\ast \omega) v = \omega (T v), \ \ \forall \ v \in V.
+$$
+
+Substituting the matrix representations, and properly denoting the transpose
+
+:::{math}
+(B \omega)^\text{T} v = & \ \omega^\text{T} (A v), \\
+\omega^\text{T} B^\text{T} v = & \ \omega^\text{T} A v.
+:::
+
+Since this is true for all $\omega \in W^\ast$ and $v \in V$, the above is equivalent to $B^\text{T} = A$, or vice versa. $\square$
+
+```
+````
+
+A direct corollary of this theorem is that
+```{math}
+\text{rank}\, T^\ast = \text{rank}\, T.
+```
+
+````{admonition} Theorem: Annihilator of kernel and image
+:class: theorem 
+
+If $T: V \rightarrow W$, and $T^\ast$ is its dual transformation, then
+
+```{math}
+\text{ker}\, T^\ast = (\text{im}\, T)^0, \ \ \ \ \ \ \text{im}\, T^\ast = (\text{ker}\, T)^0.
+```
+
+```{toggle}
+**Proof**:
+First, consider some $\phi \in \text{im}\, T^\ast$, and $v \in \text{ker} \, T$ -- then
+
+:::{math}
+\phi (v) = T^\ast(\omega) (v),
+:::
+
+for some $\omega \in W^\ast$. It follows from eq. {eq}`eq_dualtrans` that 
+
+:::{math}
+& = w \, T(v), \\
+& = 0,
+:::
+as $v$ belongs to the kernel of $T$. Therefore $\phi \in (\text{ker} \, T)^0$ which implies $\text{im} \, T^\ast \subseteq (\text{ker} \, T)^0$.
+
+Second, to prove $\text{im} \, T^\ast = (\text{ker} \, T)^0$, we may consider dimensions: using the corollary of the last theorem,
+
+:::{math}
+\text{dim} \, \text{im} \, T^\ast = \text{dim} \, \text{im} \, T.
+:::
+
+Using eq. {eq}`eq_adim`, we may write
+:::{math}
+\text{dim} \, (\text{ker} \, T)^0 = \text{dim} \, V - \text{dim} \, \text{ker} \, T,
+:::
+since $\text{ker} \, T \subset V$. From rank-nullity theorem
+
+:::{math}
+\text{dim} \, V = \text{dim} \, \text{im} \, T  + \text{dim} \, \text{ker} \, T,
+:::
+
+and so
+
+:::{math}
+\text{dim} \, (\text{ker} \, T)^0 = & \, \text{dim} \, \text{im} \, T, \\
+ = & \, \text{dim} \, \text{im} \, T^\ast. \\
+:::
+As both have the same dimension, they must be equal. $\square$
+
+```
+````
+To rephrase the above theorem, we can say that the subset of $W^\ast$ that is mapped to $0$ by $T^\ast$ is the same subset of $W^\ast$ that would map vectors in the image of $T$ to $0$. Likewise, the subset of $V^\ast$ covered by the image of $T^\ast$ take vectors in $V$, that are mapped to $0$ by $T$, also to $0$.
+
 
 ## Projections
 Consider $W = V \oplus U$; we construct an operator $P: W \rightarrow V$, element wise $w \mapsto P(w)$. For some $w = v + u$, with $v \in V$, $u \in U$, we then define $P(w) := u$.
 
-````{margin}
-```{seealso}
-See {doc}`linear-transformations` for more.
-```
-````
-
-That is to say $P$ is a linear transformation, with $\text{im}\ P = V$, $\text{ker}\ P = U$, and $P^2 = P$.
+That is to say $P$ is a linear transformation, with $\text{im}\, P = V$, $\text{ker}\, P = U$, and $P^2 = P$.
 
 $P$ is called the *projection* of $W$ onto $V$ along $U$.
 

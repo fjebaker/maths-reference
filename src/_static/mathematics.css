@@ -1,0 +1,27 @@
+
+.theorem {
+    border-color:#c566df;
+}
+.admonition.theorem .admonition-title {
+    background-color: #edddf4;
+}
+.admonition.theorem .admonition-title::before {
+    color: #c566df;
+    content: "T";
+}
+
+.lemma {
+    border-color:#c566df;
+}
+.admonition.lemma .admonition-title {
+    background-color: #edddf4;
+}
+.admonition.lemma .admonition-title::before {
+    color: #c566df;
+    content: "L";
+}
+
+.admonition p.admonition-title ~ * {
+    right: +1em;
+    padding: 0;
+}

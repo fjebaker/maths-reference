@@ -19,5 +19,10 @@ html:
 only_build_toc_files: true
 
 latex:
-  latex_engine: xelatex 
+  latex_engine: xelatex
+
+sphinx:
+  config:
+    html_css_files: 
+      - "_static/mathematics.css"
 
