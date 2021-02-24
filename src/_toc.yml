@@ -2,9 +2,8 @@
 
 - part: "Prerequisites"
   chapters:
+    - file: vectorspaces/linear-transformations
     - file: vectorspaces/vector-spaces
-      sections:
-        - file: vectorspaces/linear-transformations
     - file: diff-geo/forms
 
 - part: "Cosmic strings"
