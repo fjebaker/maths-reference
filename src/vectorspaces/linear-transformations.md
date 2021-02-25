@@ -1,6 +1,6 @@
 # Linear transformations
 
-
+(sec_kernim)=
 ## Kernel and image
 For some $T \in \mathcal{L}(V, W)$ we associate two subspaces -- the *kernel* and the *image*.
 
@@ -24,6 +24,7 @@ Let $T : V \rightarrow W$ be a linear transformation. The image of $T$ is define
 
 ````
 
+(sec_ranknull)=
 ## Rank and nullity
 ````{admonition} Definition: Rank
 The *rank* of a linear transformation $T$ is the dimension of its image
