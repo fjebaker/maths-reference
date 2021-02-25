@@ -2,6 +2,8 @@
 
 An introductory *Living Book* on topics in astrophysical topology, with focus on Cosmic Strings and recent research.
 
+View it live [here](https://dustpancake.github.io/topological-defects/titlepage.html).
+
 ## Building
 To build, clone the repository and install the requirements
 ```bash
