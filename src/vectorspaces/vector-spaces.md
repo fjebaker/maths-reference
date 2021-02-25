@@ -64,7 +64,7 @@ $\gamma$ is a *passive transformation*, as it acts to alter the basis we are usi
 The basis transformation on the dual basis is given by the inverse transpose of $\gamma$
 
 ```{math}
-\beta'^i := \sum_{j=1}^n \gamma^i_{\hphantom{j}i} \beta^j. 
+\beta'^i := \sum_{j=1}^n \gamma^i_{\hphantom{i}j} \beta^j. 
 ```
 
 ## Annihilator
@@ -114,13 +114,6 @@ The operation of $T^\ast$ is commonly termed the *adjoint*. For all $v \in V$ we
 (T^\ast \omega)\, v = \omega \, ( T v ).
 ```
 
-````{margin}
-```{seealso}
-See {doc}`linear-transformations` for more on kernels and images.
-```
-````
-
-
 ````{admonition} Theorem: Matrix of dual transformation
 :class: theorem 
 
@@ -150,6 +143,12 @@ A direct corollary of this theorem is that
 ```{math}
 \text{rank}\, T^\ast = \text{rank}\, T.
 ```
+
+````{margin}
+```{seealso}
+More information in {ref}`sec_kernim`.
+```
+````
 
 ````{admonition} Theorem: Annihilator of kernel and image
 :class: theorem 
@@ -186,7 +185,7 @@ Using eq. {eq}`eq_adim`, we may write
 :::{math}
 \text{dim} \, (\text{ker} \, T)^0 = \text{dim} \, V - \text{dim} \, \text{ker} \, T,
 :::
-since $\text{ker} \, T \subset V$. From rank-nullity theorem
+since $\text{ker} \, T \subset V$. From rank-nullity (see {ref}`sec_ranknull`) theorem
 
 :::{math}
 \text{dim} \, V = \text{dim} \, \text{im} \, T  + \text{dim} \, \text{ker} \, T,
@@ -198,7 +197,7 @@ and so
 \text{dim} \, (\text{ker} \, T)^0 = & \, \text{dim} \, \text{im} \, T, \\
  = & \, \text{dim} \, \text{im} \, T^\ast. \\
 :::
-As both have the same dimension, they must be equal. $\square$
+As both have the same dimension, they must be equal. The exact same line of thinking follows for the other equation. $\square$
 
 ```
 ````
