@@ -23,6 +23,10 @@ There are a few noteworthy properties:
 
 The last property can be reasoned given that the forms are alternating, and the degenerate choice of $v \in V$ arguments for $p > n$.
 
+```{hint}
+The space of $p$-forms $\Lambda^pV$ is *itself* a vector space.
+```
+
 ## Vector space valued $p$-forms
 Real valued alternating forms may be generalized to have vector space codomains.
 
@@ -81,7 +85,37 @@ The properties of the exterior product are
 ```
 for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$.
 
-### Interior derivative
+### Inner derivative
+Sometimes called the interior product.
+````{admonition} Definition: Inner derivative
+Let $\Lambda^p V$ be the space of alternating $p$ forms on $V$. The *inner derivative* is defined
+```{math}
+\iota_v : \Lambda^p V \rightarrow & \, \Lambda^{p-1}V, \\
+\varphi \mapsto & \, \iota_v \varphi,
+```
+for some $v \in V$. Acting on vectors $v_i \in V$
+```{math}
+(\iota_v \varphi)(v_{1}, \ldots, v_{p-1}) := \varphi (v, v_q, \ldots, v_{p-1}).
+```
+````
+The inner derivative is a contraction, which acts to fix a vector that $\varphi$ acts on, by definition.
+
+````{margin}
+```{seealso}
+The {ref}`sec_grassman` is the direct sum of vector spaces
+:::{math}
+\Lambda V := \bigoplus_{p=0}^n \Lambda^p V.
+:::
+```
+````
+
+$\iota_v$ is a [derivation](https://en.wikipedia.org/wiki/Derivation_(differential_algebra)) of the Grassman algebra $\Lambda V$. The inner derivative has the following properties
+- linear map,
+- linear in $v$, e.g. $\iota_{v+u} = \iota_{v} + \iota_{u}$,
+- graded Leibniz rule, namely for some $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$
+```{math}
+\iota_v(\varphi \wedge \psi) = (\iota_v \varphi) \wedge \psi + (-1)^p \varphi \wedge (\iota_v \psi)
+```
 
 ## Basis
 A basis of $\Lambda^pV$ is the exterior product of the dual basis
@@ -123,3 +157,9 @@ Given an orientation $\omega$, then a basis $b_i$ is oriented if
 ```
 
 Orientations become very useful when we discuss integration in the next chapter.
+
+## References
+```{bibliography} references.bib
+:list: bullet
+:all:
+```
