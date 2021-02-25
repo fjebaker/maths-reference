@@ -116,6 +116,52 @@ $\iota_v$ is a [derivation](https://en.wikipedia.org/wiki/Derivation_(differenti
 ```{math}
 \iota_v(\varphi \wedge \psi) = (\iota_v \varphi) \wedge \psi + (-1)^p \varphi \wedge (\iota_v \psi)
 ```
+- $\iota_v \iota_u + \iota_u \iota_v = 0$
+
+The last point follows from the alternating property of forms.
+
+````{admonition} Inner derivative
+:class: query
+Is the classification of the inner derivative manifestly a *derivation* (i.e. obeys Leibniz)?
+
+Without explicitly using the Leibniz property, we can derive the behaviour of the inner derivative when operating on the exterior product of forms.
+
+```{toggle}
+This is best approached by first expanding the wedge product. 
+
+We will consider $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. Let $v_i \in V$, then
+:::{math}
+\iota_{v_1} (\varphi \wedge \psi) (v_2, \ldots, v_{p+q}) = (\varphi \wedge \psi) (v_1, v_2, \ldots, v_{p+q}), 
+:::
+by definition. Expanding the RHS
+:::{math}
+= \frac{1}{p! q!} \sum_{\pi \in S_{p+q}} \text{sgn}(\pi) \varphi (v_{\pi (1)}, \ldots, v_{\pi(p)}) \psi (v_{\pi (p+1)}, \ldots, v_{\pi(p+q)}),
+:::
+Now we use that the inner derivative fixes a vector argument; we can rewrite the sum into two parts, namely those terms where $\varphi$ acts on $v_1$, and those where $\psi$ does:
+
+:::{math}
+= \frac{p}{p! q!} & \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) \varphi (v_{1}, v_{\pi(1)}, \ldots, v_{\pi(p-1)}) \psi (v_{\pi (p)}, \ldots, v_{\pi(p+q-1)}) \\
++  \frac{q}{p! q!} (-1)^p & \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) \varphi (v_{\pi (1)}, \ldots, v_{\pi(p)}) \psi (v_{1}, v_{\pi(p+1)}, \ldots, v_{\pi(p+q-1)}) ,
+:::
+where $(-1)^p$ is a continuity factor to account for the initial sign of $\pi$ in the second summation term; effectively, there are $p$ permutations of $\pi$ before $\psi$ acts on $v_1$.
+
+Note the factors of $p$ and $q$ on each term. This is from combinatorics; if $D(n)$ denotes the number of permutations of $n$, then an $n$ permutation with a single fixed point is the $n D(n-1)$.
+
+Now apply the definition of the inner derivative again
+:::{math}
+= \frac{p}{p! q!} & \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) (\iota_{v_1} \varphi) (v_{\pi(1)}, \ldots, v_{\pi(p-1)}) \psi (v_{\pi (p)}, \ldots, v_{\pi(p+q-1)}) \\
++  \frac{q}{p! q!} (-1)^p & \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) \varphi (v_{\pi (1)}, \ldots, v_{\pi(p)}) (\iota_{v_1}\psi) (v_{\pi(p+1)}, \ldots, v_{\pi(p+q-1)}).
+:::
+Then, by noting that $p/p! = 1/(p-1)!$, we can replace the expansions with wedge products again
+:::{math}
+=& \, \left((\iota_{v_1} \varphi) \wedge \psi \right) (v_2, \ldots, v_{p+q}) \\
+& \, + (-1)^p \left(\varphi \wedge ( \iota_{v_1} \psi) \right)(v_2, \ldots, v_{p+q})
+:::
+which is precisely the graded Leibniz rule.
+
+The inner derivative is then manifestly a derivation, by virtue of the exterior product.
+```
+````
 
 ## Basis
 A basis of $\Lambda^pV$ is the exterior product of the dual basis
