@@ -21,6 +21,9 @@ only_build_toc_files: true
 latex:
   latex_engine: xelatex
 
+bibtex_bibfiles:
+  - "diff-geo/references.bib"
+
 sphinx:
   config:
     html_css_files: 
