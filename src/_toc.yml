@@ -5,9 +5,13 @@
     - file: vectorspaces/linear-transformations
     - file: vectorspaces/vector-spaces
     - file: diff-geo/forms
+    - file: glossary/glossary
+      sections:
+        - file: glossary/algebras
 
 - part: "Cosmic strings"
   chapters:
     - file: cosmicstrings/01_cosmic_strings
       sections:
         - file: cosmicstrings/section_derivation
+
