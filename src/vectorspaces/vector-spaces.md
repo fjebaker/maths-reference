@@ -14,7 +14,7 @@ if $W = V + U$, and $\{ 0 \} = V \cap U$.
 ```{admonition} Lemma
 :class: lemma
 
-Let $U, V \subset W$, then $W = V \oplus U$ *if and only if* for every $w \in W$ there exist unique vectors $v \in V$ and $u \in U$ such that $w = v + u$.
+Let $U, V$ be subspaces of a vector space $W$, then $W = V \oplus U$ *if and only if* for every $w \in W$ there exist unique vectors $v \in V$ and $u \in U$ such that $w = v + u$.
 ```
 
 We can sketch a visual proof for this Lemma: consider $W = \mathbb{R}^2$, with the only non-trivial subspaces represented by lines passing through the origin, and let $V$ be the vectors lying exclusively along the $x$-axis plus the zero vector, and $U$ be the vectors lying along the $y$-axis plus the zero vector. 
