@@ -145,7 +145,7 @@ Now we use that the inner derivative fixes a vector argument; we can rewrite the
 :::
 where $(-1)^p$ is a continuity factor to account for the initial sign of $\pi$ in the second summation term; effectively, there are $p$ permutations of $\pi$ before $\psi$ acts on $v_1$.
 
-Note the factors of $p$ and $q$ on each term. This is from combinatorics; if $D(n)$ denotes the number of permutations of $n$, then an $n$ permutation with a single fixed point is the $n D(n-1)$.
+Note the factors of $p$ and $q$ on each term. This is from combinatorics; if $D(n)$ denotes the number of permutations of $n$, then an $n$ permutation with a single fixed point is $n D(n-1)$.
 
 Now apply the definition of the inner derivative again
 :::{math}
@@ -159,7 +159,7 @@ Then, by noting that $p/p! = 1/(p-1)!$, we can replace the expansions with wedge
 :::
 which is precisely the graded Leibniz rule.
 
-The inner derivative is then manifestly a derivation, by virtue of the exterior product.
+The inner derivative is manifestly a derivation, by virtue of the exterior product.
 ```
 ````
 
@@ -172,7 +172,7 @@ with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. Consequently
 ```{math}
 \text{dim}\, \Lambda^p V = {n \choose p}.
 ```
-It is always the case that $\text{dim}^n V = 1$.
+It is always the case that $\text{dim}\, \Lambda^n V = 1$.
 
 For example, consider $n = 3$, the possible bases for different degrees of forms are
 ```{math}
@@ -203,6 +203,8 @@ Given an orientation $\omega$, then a basis $b_i$ is oriented if
 ```
 
 Orientations become very useful when we discuss integration in the next chapter.
+
+
 
 ## References
 ```{bibliography} references.bib
