@@ -116,7 +116,7 @@ $\iota_v$ is a [derivation](https://en.wikipedia.org/wiki/Derivation_(differenti
 ```{math}
 \iota_v(\varphi \wedge \psi) = (\iota_v \varphi) \wedge \psi + (-1)^p \varphi \wedge (\iota_v \psi)
 ```
-- $\iota_v \iota_u + \iota_u \iota_v = 0$
+- $\iota_v \iota_u + \iota_u \iota_v = 0$, corollary $\iota_v^2 = 0$
 
 The last point follows from the alternating property of forms.
 
