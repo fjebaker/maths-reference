@@ -1,3 +1,0 @@
-# Cosmic Strings
-
-Test Text.
