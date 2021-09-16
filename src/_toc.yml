@@ -5,15 +5,18 @@ root: titlepage
 parts:
 
 - caption: Differential Geometry
+
   chapters:
   - file: vectorspaces/outline
     sections:
     - file: vectorspaces/linear-transformations
     - file: vectorspaces/vector-spaces
+
   - file: diff-geo/outline
     sections:
     - file: diff-geo/forms
     - file: diff-geo/components
+    
   - file: glossary/glossary
     sections:
     - file: glossary/algebras
