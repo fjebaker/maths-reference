@@ -1,4 +1,4 @@
-# Topological Defects
+# Mathematics Reference
 
 An introductory *Living Book* on topics in astrophysical topology, with focus on cosmic strings.
 

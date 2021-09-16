@@ -1,8 +1,8 @@
-# Topological Defects
+# Mathematics Reference
 
 An introductory *Living Book* on topics in astrophysical topology, with focus on Cosmic Strings and recent research.
 
-View it live [here](https://dustpancake.github.io/topological-defects/titlepage.html).
+View it live [here](https://fjebaker.github.io/maths-reference/titlepage.html).
 
 ## Building
 To build, clone the repository and install the requirements

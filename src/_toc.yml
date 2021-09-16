@@ -1,22 +1,23 @@
-- file: titlepage
+format: jb-book
+root: titlepage
 
-- part: "Prerequisites"
-  chapters:
-    - file: vectorspaces/outline
-      sections:
-      - file: vectorspaces/linear-transformations
-      - file: vectorspaces/vector-spaces
-    - file: diff-geo/outline
-      sections:
-        - file: diff-geo/forms
-        - file: diff-geo/components
-    - file: glossary/glossary
-      sections:
-        - file: glossary/algebras
 
-- part: "Cosmic strings"
+parts:
+
+- caption: Differential Geometry
+
   chapters:
-    - file: cosmicstrings/01_cosmic_strings
-      sections:
-        - file: cosmicstrings/section_derivation
+  - file: vectorspaces/outline
+    sections:
+    - file: vectorspaces/linear-transformations
+    - file: vectorspaces/vector-spaces
+
+  - file: diff-geo/outline
+    sections:
+    - file: diff-geo/forms
+    - file: diff-geo/components
+    
+  - file: glossary/glossary
+    sections:
+    - file: glossary/algebras
 
