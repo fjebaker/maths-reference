@@ -3,7 +3,8 @@ root: titlepage
 
 
 parts:
-- caption: Prerequisites
+
+- caption: Differential Geometry
   chapters:
   - file: vectorspaces/outline
     sections:
@@ -16,4 +17,4 @@ parts:
   - file: glossary/glossary
     sections:
     - file: glossary/algebras
-    
+

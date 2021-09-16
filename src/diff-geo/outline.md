@@ -1,1 +1,4 @@
 # Differential Geometry
+
+```{tableofcontents}
+```
