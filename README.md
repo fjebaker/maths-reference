@@ -1,7 +1,5 @@
 # Mathematics Reference
 
-An introductory *Living Book* on topics in astrophysical topology, with focus on Cosmic Strings and recent research.
-
 View it live [here](https://fjebaker.github.io/maths-reference/titlepage.html).
 
 ## Building

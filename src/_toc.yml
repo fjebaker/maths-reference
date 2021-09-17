@@ -5,6 +5,7 @@ root: titlepage
 parts:
 
 - caption: Differential Geometry
+  numbered: true
 
   chapters:
   - file: vectorspaces/outline
@@ -14,6 +15,8 @@ parts:
 
   - file: diff-geo/outline
     sections:
+    - file: diff-geo/manifolds
+    - file: diff-geo/vectors-tensors
     - file: diff-geo/forms
     - file: diff-geo/components
     
