@@ -36,3 +36,15 @@
     right: +1em;
     padding: 0;
 }
+
+
+.notation {
+    border-color:#eeb230;
+}
+.admonition.notation .admonition-title {
+    background-color: #f3daa5;
+}
+.admonition.notation .admonition-title::before {
+    color: #eeb230;
+    content: "N";
+}
