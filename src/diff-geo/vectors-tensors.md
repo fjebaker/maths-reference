@@ -162,6 +162,7 @@ From our knowledge of vector spaces, we may already observe
 ```
 and therefore identify the transformation between dual bases as
 ```{math}
+:label: eq_dual_basis_transform
 \beta^{\prime i} = \left( \gamma \right)^i_{\phantom{i} j} \beta^j,
 ```
 where the matrix $\gamma$ is the inverse of the $\gamma^{-1}$ seen in eq. {eq}`eq_basis_transform`, which can be easily verified with eq. {eq}`eq_bases_relation`.
@@ -262,4 +263,19 @@ The $e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}$ are linear
 e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} 
 =
 b_{i_1} \otimes \dots \otimes b_{i_r} \otimes \beta^{j_1} \otimes \dots \otimes \beta^{j_s}.
+```
+
+The $\Theta^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} \in \mathbb{R}$ are the components of the tensor relative to the chosen basis. The change of basis for the basis vectors of a tensor follows from eq. {eq}`eq_basis_transform` and eq. {eq}`eq_dual_basis_transform`, which implies the transformation of the components
+
+```{math}
+\Theta^{i^\prime_1, \dots, i^\prime_r}_{\phantom{i^\prime_1, \dots, i^\prime_r} j^\prime_1, \dots, j^\prime_s}
+= {
+    \left( \gamma^{-1} \right)^{i^\prime_1}_{\phantom{i^\prime_1}i_1}
+    \dots
+    \left( \gamma^{-1} \right)^{i^\prime_r}_{\phantom{i^\prime_r}i_r}
+    \left( \gamma \right)^{j_1}_{\phantom{j_1}j^\prime_1}
+    \dots
+    \left( \gamma \right)^{j_s}_{\phantom{j_s}j^\prime_s}
+}
+\Theta^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}.
 ```
