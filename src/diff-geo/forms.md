@@ -1,4 +1,6 @@
-# Alternating forms
+# Differential forms
+
+
 
 ## Alternating real valued $p$-forms
 
@@ -9,7 +11,14 @@ Let $V$ be a vector space, then the alternating real-valued forms of degree $p$ 
 ```
 ````
 
-*Multilinear* is equivalent to saying linear in each argument, and *alternating* means for $\pi \in S_n$
+````{margin}
+```{seealso}
+$S_n$ is the symmetric group, which, defined over $n$ symbols, is the set of permutations of $n$ symbols.
+
+[Wikipedia: Symmetric Group](https://en.wikipedia.org/wiki/Symmetric_group).
+````
+
+Here, *multilinear* is equivalent to linear in each argument, and *alternating* implies for $\pi \in S_n$
 
 ```{math}
 \varphi  \left( v_{\pi (1)}, v_{\pi (2)}, \ldots, v_{\pi (n) } \right) = \text{sgn}( \pi ) \varphi  \left( v_{1}, v_{2}, \ldots, v_{n} \right).
