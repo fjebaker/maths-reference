@@ -75,7 +75,7 @@ f: \mathcal{M} \rightarrow \mathbb{R}.
 
 Functions on manifolds may be composed with the homeomorphisms of charts as $f \circ \phi_\alpha^-1$, taking $\mathbb{R}^n$ into $\mathbb{R}$; such compositions are smooth functions of the coordinates $x^i$. 
 
-We are also permitted to express a smooth curve over an interval $Q : \mathbb{R} \rightarrow \mathcal{M}$, parameterized by a real variable $t \in \left[ a, b \right]$:
+We are also permitted to express a smooth curve over an interval $Q : \mathbb{R} \rightarrow \mathscr{U_\alpha}$, parameterized by a real variable $t \in \left[ a, b \right]$:
 
 ```{figure} ../tex-images/test_0.svg
 :height: 300px
@@ -89,16 +89,13 @@ We write
 
 requiring $x^i(t)$ to be smooth functions of $t$. 
 
-We may also consider the composition $f \circ Q$
+We may also consider the composition $f \circ Q$, along with $\phi_\alpha \circ Q$, to describe the action of the function on $t$:
+
 
 ```{math}
-\left( f \circ Q \right)(t) = f(Q(t)) = f\left( p \right),
+\left( f \circ Q \right)(t) =& f(Q(t)) \\
+=& f\left( x^1(t), ..., x^n (t) \right)
 ```
 
-which is equivalent to the compositon $f \circ \phi_\alpha^{-1} \circ \phi_\alpha \circ Q$, inviting the expression
-
-```{math}
-f(Q(t)) = f\left( x^1(t), ..., x^n (t) \right).
-```
-
+where $p$ is the point imaged by $Q(t)$ in the open subset $\mathscr{U}_\alpha$.
 

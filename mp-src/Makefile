@@ -4,7 +4,7 @@ TARGETS := test.svg
 
 
 all: $(TARGETS)
-	rm -f *.aux *.dvi *.log *.ps
+	rm -f *.log *.tex *.mps *.mpx
 	mv *.svg ../src/tex-images
 
 
