@@ -103,7 +103,49 @@ The properties of the exterior product are
 ```{math}
 \varphi \wedge \psi = (-1)^{pq} \psi \wedge \varphi,
 ```
-for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.
+for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.$
+
+### Pull back
+The pullback is an *active transformation* between vector spaces of $p$-forms. 
+
+````{admonition} Definition: Pull back
+Let $F: W \rightarrow V$ be a linear transformation between two vector spaces $W$ and $V$. The *pull back* $F^\ast$ is the induced linear mapping
+
+```{math}
+F^\ast :
+    \Lambda^p V & \rightarrow \Lambda^p W, \\
+    \varphi & \mapsto F^\ast \varphi,
+```
+via
+```{math}
+(F^\ast \varphi) \left( w_1, \dots, w_p \right)
+    :=
+    \varphi \left( F w_1, \dots, F w_p \right).
+```
+
+````
+
+````{margin}
+```{seealso}
+The pull back stems from a *contravariant functor*, which, in mathematical category theory, has a different meaning from the terminology used in physics. 
+
+See more [Wikipedia: Functors](https://en.wikipedia.org/wiki/Functor#Covariance_and_contravariance).
+````
+
+The pull back is a *homomorphism* of the exterior algebras; that is to say
+
+- $F^\ast$ is linear,
+- distributive:
+```{math}
+F^\ast(\varphi \wedge \psi) = \left( F^\ast \varphi \right) \wedge \left( F^\ast \psi \right).
+```
+
+The additional property of the pull-back is
+
+- reverse composition
+```{math}
+\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1
+```
 
 ### Inner derivative
 Sometimes called the interior product.
