@@ -262,37 +262,6 @@ with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. Consequently
 ```
 It is always the case that $\text{dim}\, \Lambda^n V = 1$.
 
-````{admonition} Theorem: Dimension of the exterior algebra
-:class: theorem
-The *exterior algebra* may be expressed as the direct sum 
-```{math}
-\Lambda V := \bigoplus_{p=0}^n \Lambda^p V,
-```
-with dimensionality
-```{math}
-\text{dim}\, \Lambda V = 2^n.
-```
-:::{toggle}
-**Proof:** We begin by noting a result for the dimension of direct sums along with eq. {eq}`eq_dim_basis`
-```{math}
-\text{dim}\, \Lambda V 
-    &= 
-    \sum_{p=0}^n \text{dim}\, \Lambda^p V. \\
-    &= 
-    \sum_{p=0}^n {n \choose p},
-```
-which is just the [binomial theorem](https://en.wikipedia.org/wiki/Binomial_theorem),
-```{math}
-\left( 1 + x \right)^n = \sum_{k=0}^n {n \choose k} x^k,
-```
-for the case of $x = 1$. Therefore:
-```{math}
-\text{dim}\, \Lambda V = 2^n. \ \ \square
-```
-:::
-````
-
-
 For example, consider $n = 3$, the possible bases for different degrees of forms are
 ```{math}
 \Lambda^1V : & \  \left\{ \beta_1, \ \beta_2, \ \beta_3 \right\}, \\
