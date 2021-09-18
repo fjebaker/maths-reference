@@ -1,7 +1,7 @@
 # Algebras
 
 (sec_grassman)=
-## Grassman Algebra
+## Grassman algebra
 The Grassman algebra is the *exterior algebra* of $p$-forms. The exterior algebra may be expressed as the direct sum 
 ```{math}
 \Lambda V := \bigoplus_{p=0}^n \Lambda^p V,

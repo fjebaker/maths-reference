@@ -103,7 +103,7 @@ The properties of the exterior product are
 ```{math}
 \varphi \wedge \psi = (-1)^{pq} \psi \wedge \varphi,
 ```
-for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.$
+for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.
 
 ### Pull back
 The pullback is an *active transformation* between vector spaces of $p$-forms. 
@@ -252,14 +252,31 @@ The inner derivative is manifestly a derivation, by virtue of the exterior produ
 
 ## Basis
 A basis of $\Lambda^pV$ is the exterior product of the dual basis
+
 ```{math}
 \beta^{i_1} \wedge \beta^{i_2} \wedge \ldots \wedge \beta^{i_p}
 ```
-with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. Consequently
+
+````{margin}
+```{seealso}
+Recall
+:::{math}
+{n \choose k} = \frac{P(n, k)}{k!}
+:::
+
+See more [Wikipedia: Combination](https://en.wikipedia.org/wiki/Combination).
+```
+````
+
+with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. 
+
+Consequently, since each $p$-form may be described over an $n$-dimensional basis, the dimensionality of $\Lambda^pV$ is the permutations of $p$ of the $n$ possible basis vectors $\beta^i$, without repetition, due to the alternating property. Therefore, we conclude
+
 ```{math}
 :label: eq_dim_basis
 \text{dim}\, \Lambda^p V = {n \choose p}.
 ```
+
 It is always the case that $\text{dim}\, \Lambda^n V = 1$.
 
 For example, consider $n = 3$, the possible bases for different degrees of forms are
