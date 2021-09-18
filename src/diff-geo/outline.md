@@ -4,3 +4,10 @@ Differential geometry is the study of *manifolds*, along with the respective beh
 
 ```{tableofcontents}
 ```
+
+
+References: 
+```{bibliography} references.bib
+:list: bullet
+:all:
+```

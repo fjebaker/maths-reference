@@ -37,7 +37,7 @@ The last property can be reasoned given that the forms are alternating, and the 
 The space of $p$-forms $\Lambda^pV$ is *itself* a vector space.
 ```
 
-## Vector space valued $p$-forms
+### Vector space valued $p$-forms
 Real valued alternating forms may be generalized to have vector space codomains.
 
 ````{admonition} Definition: Alternating vector space valued $p$-forms
@@ -49,12 +49,22 @@ Let $V, W$ be vector spaces, then the alternating vector space valued forms of d
 
 This permits the decomposition of any $\varphi \in \Lambda^p (V, W)$ onto a basis $a_i$ of $W$
 ```{math}
-\varphi = \sum_i^{\text{dim}\, W} \varphi^i a_i,
+\varphi = \varphi^a a_a,
 ```
-with $\varphi^i \in \Lambda^pV$.
+with $\varphi^a \in \Lambda^pV$.
 
-There is a special case where $W$ may be a Lie algebra; then $\varphi \in \Lambda^p (V, \mathfrak{g})$ is decomposed onto the generators of the algebra $T_a$, and the exterior product operator is replaced by commutators on the basis.
 
+### Lie algebra valued $p$-forms
+There is a special case where $W$ may be a Lie algebra; then the form is decomposed onto the generators of the algebra $T_a$, and the exterior product operator is replaced by commutators on the basis. Consider $\varphi \in \Lambda^p (V, \mathfrak{g})$ and $\psi \in \Lambda^q (V, \mathfrak{g})$, decomposed as
+```{math}
+\varphi &= \varphi^a T_a, \\
+\psi &= \psi^b T_b,
+```
+with $\varphi^a \in \Lambda^p V$, $\psi^b \in \Lambda^q V$. We then redefine the exterior product by using the exterior product of the generators of the Lie algebra
+```{math}
+\left[ \varphi, \psi \right] &= \varphi^a \wedge \psi^b \left[ T_a, T_b \right] \\
+&= -(-1)^{pq} \left[ \varphi, \psi \right].
+```
 ## Operations
 
 ### Exterior product
@@ -93,7 +103,49 @@ The properties of the exterior product are
 ```{math}
 \varphi \wedge \psi = (-1)^{pq} \psi \wedge \varphi,
 ```
-for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$.
+for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.$
+
+### Pull back
+The pullback is an *active transformation* between vector spaces of $p$-forms. 
+
+````{admonition} Definition: Pull back
+Let $F: W \rightarrow V$ be a linear transformation between two vector spaces $W$ and $V$. The *pull back* $F^\ast$ is the induced linear mapping
+
+```{math}
+F^\ast :
+    \Lambda^p V & \rightarrow \Lambda^p W, \\
+    \varphi & \mapsto F^\ast \varphi,
+```
+via
+```{math}
+(F^\ast \varphi) \left( w_1, \dots, w_p \right)
+    :=
+    \varphi \left( F w_1, \dots, F w_p \right).
+```
+
+````
+
+````{margin}
+```{seealso}
+The pull back stems from a *contravariant functor*, which, in mathematical category theory, has a different meaning from the terminology used in physics. 
+
+See more [Wikipedia: Functors](https://en.wikipedia.org/wiki/Functor#Covariance_and_contravariance).
+````
+
+The pull back is a *homomorphism* of the exterior algebras; that is to say
+
+- $F^\ast$ is linear,
+- distributive:
+```{math}
+F^\ast(\varphi \wedge \psi) = \left( F^\ast \varphi \right) \wedge \left( F^\ast \psi \right).
+```
+
+The additional property of the pull-back is
+
+- reverse composition
+```{math}
+\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1
+```
 
 ### Inner derivative
 Sometimes called the interior product.
@@ -180,9 +232,41 @@ A basis of $\Lambda^pV$ is the exterior product of the dual basis
 ```
 with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. Consequently
 ```{math}
+:label: eq_dim_basis
 \text{dim}\, \Lambda^p V = {n \choose p}.
 ```
 It is always the case that $\text{dim}\, \Lambda^n V = 1$.
+
+````{admonition} Theorem: Dimension of the exterior algebra
+:class: theorem
+The *exterior algebra* may be expressed as the direct sum 
+```{math}
+\Lambda V := \bigoplus_{p=0}^n \Lambda^p V,
+```
+with dimensionality
+```{math}
+\text{dim}\, \Lambda V = 2^n.
+```
+:::{toggle}
+**Proof:** We begin by noting a result for the dimension of direct sums along with eq. {eq}`eq_dim_basis`
+```{math}
+\text{dim}\, \Lambda V 
+    &= 
+    \sum_{p=0}^n \text{dim}\, \Lambda^p V. \\
+    &= 
+    \sum_{p=0}^n {n \choose p},
+```
+which is just the [binomial theorem](https://en.wikipedia.org/wiki/Binomial_theorem),
+```{math}
+\left( 1 + x \right)^n = \sum_{k=0}^n {n \choose k} x^k,
+```
+for the case of $x = 1$. Therefore:
+```{math}
+\text{dim}\, \Lambda V = 2^n. \ \ \square
+```
+:::
+````
+
 
 For example, consider $n = 3$, the possible bases for different degrees of forms are
 ```{math}
@@ -213,11 +297,3 @@ Given an orientation $\omega$, then a basis $b_i$ is oriented if
 ```
 
 Orientations become very useful when we discuss integration in the next chapter.
-
-
-
-## References
-```{bibliography} references.bib
-:list: bullet
-:all:
-```
