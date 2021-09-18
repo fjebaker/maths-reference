@@ -142,10 +142,35 @@ F^\ast(\varphi \wedge \psi) = \left( F^\ast \varphi \right) \wedge \left( F^\ast
 
 The additional property of the pull-back is
 
-- reverse composition
+- reverse composition,
 ```{math}
-\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1
+:label: eq_pullback_composition
+\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1.
 ```
+
+
+This property can be demonstrated manifestly.
+
+````{toggle}
+We act $\left( F_1 \circ F_2 \right)^\ast$ on a $p$-form $\varphi \in \Lambda^pV$:
+
+```{math}
+\left( F_1 \circ F_2 \right)^\ast \varphi \left( w_1, \dots, w_p \right)
+=
+    \varphi \left( \left( F_1 \circ F_2 \right) w_1, \dots, \left( F_1 \circ F_2 \right) w_p \right),
+```
+
+which, by associativity of homomorphisms, is
+
+```{math}
+&= 
+    F_2^\ast \varphi \left( F_1 w_1, \dots, F_1 w_p \right), \\
+&=
+    \left( F_2^\ast \circ F_1^\ast \right) \varphi \left( w_1, \dots, w_p \right), \\
+```
+
+and therefore the property of eq. {eq}`eq_pullback_composition` holds.
+````
 
 ### Inner derivative
 Sometimes called the interior product.
