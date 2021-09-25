@@ -1,6 +1,12 @@
 (sec_diff_forms)=
 # Forms
 
+We will principally examine two types of forms, namely *alternating* forms, and *differential* forms. As differential forms are a specialization of alternating forms, we will focus on defining and examining these only later. Instead, we begin by introducing alternating forms as $(0, p)$ tensors, along with operations on these objects.
+
+Many of these ideas may be discussed fairly abstractly, and indeed, it may be argued it is easier to discuss the general actions of forms, to gain a familiarly with their behaviour, before providing a representation or decomposition. This is precisely what we will do here -- to introduce a basis for alternating forms, we first define what a form is, operations on and with forms, and finally how the basis may be expressed in term of this language. This may feel a little abstract at first, but unfortunately we require some ground work to appreciate the physical significance of these objects.
+
+This section will occupy itself with alternating forms, and introduce the differential form towards the end. This will set us up with a good foundation for discussing the exterior derivative and integration in the next section, before moving on to a detailed look at the metric.
+
 ## Alternating real valued $p$-forms
 
 ````{admonition} Definition: Alternating real valued $p$-forms
