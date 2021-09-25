@@ -46,7 +46,7 @@ beginfig(0);
         draw manifold;
         draw line_path shifted (0.7u, 0.2u) dashed evenly;
 
-        label(btex $\mathscr{U}_\alpha \subset \mathcal{M}$ etex, (8.5u, 5u));
+        label(btex $\mathscr{U} \subset \mathcal{M}$ etex, (8.5u, 5u));
 
         draw (2.7u,2.2u) withpen pencircle scaled 3;
         label.llft(btex $Q(a)$ etex, (2.7u,2.2u) shifted (0.1u, 0));
