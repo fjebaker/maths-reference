@@ -149,7 +149,7 @@ We have encountered the notion of a *contravariant vector* in defining tangent v
 \phi : \ \  T_x \mathscr{U}_\alpha \rightarrow \mathbb{R}.
 ```
 
-We will later identify these maps with the far broader concept of *differential forms* (see {ref}`sec_diff_forms`), and covariant vectors specifically as *one-forms*, but for now, we will consider them as the *dual space* of the tangent space $T_x \mathscr{U}_\alpha$ , sometimes denoted as $T^\ast_x \mathscr{U}_\alpha$. We will write the basis of the cotangent space $\beta^i$, with the decomposition
+We will later identify these maps with the far broader concept of *differential forms* (see {ref}`sec_diff_forms`), and covariant vectors specifically as *one-forms*, but for now, we will consider them as the *dual space* of the tangent space $T_x \mathscr{U}_\alpha$ , often denoted as $T^\ast_x \mathscr{U}_\alpha$ or $\Lambda^1 T_x \mathscr{U}_\alpha$. We will write the basis of the cotangent space $\beta^i$, with the decomposition
 ```{math}
 \phi = \phi_i \beta^i,
 ```
@@ -163,7 +163,7 @@ From our knowledge of vector spaces, we may already observe
 and therefore identify the transformation between dual bases as
 ```{math}
 :label: eq_dual_basis_transform
-\beta^{\prime i} = \left( \gamma \right)^i_{\phantom{i} j} \beta^j,
+\beta^{\prime i} = \gamma^i_{\phantom{i} j} \beta^j,
 ```
 where the matrix $\gamma$ is the inverse of the $\gamma^{-1}$ seen in eq. {eq}`eq_basis_transform`, which can be easily verified with eq. {eq}`eq_bases_relation`.
 
@@ -184,12 +184,12 @@ Given a point $x$ in an open subspace $\mathscr{U}_\alpha \subset \mathbb{R}^n$,
 
 We then define a *tensor* of type $(r, s)$ as the map
 ```{math}
-\Theta:
+T:
     \Pi^s_{\phantom{s}r}
     \rightarrow
     \mathbb{R}.
 ```
-The maps $\Theta$ are said to be *multilinear*, i.e. linear in each argument, and span a vector-space of dimension $n^{r+s}$.
+The maps $T$ are said to be *multilinear*, i.e. linear in each argument, and span a vector-space of dimension $n^{r+s}$.
 
 
 ````{admonition} Definition: Tensor space
@@ -208,17 +208,17 @@ The space of tensors is the space of *tensor products*, at a point $x \in \maths
 
 ````
 
-We can identify the basis of a tensor in the tensor space by considering the action of the map $\Theta$ for $\phi^i \in T^\ast_x \mathscr{U}_\alpha$ and $\dot{x}^i \in T_x \mathscr{U}_\alpha$
+We can identify the basis of a tensor in the tensor space by considering the action of the map $T$ for $\phi^i \in T^\ast_x \mathscr{U}_\alpha$ and $\dot{x}^i \in T_x \mathscr{U}_\alpha$
 ```{math}
-\Theta(\phi^1, ..., \phi^r, \dot{x}_1, \dots, \dot{x}_s)
+T(\phi^1, ..., \phi^r, \dot{x}_1, \dots, \dot{x}_s)
     & =
-    \Theta(
+    T(
         \phi^1_{\phantom{1}i_1} \beta^{i_1}, \dots, \phi^r_{\phantom{r}i_r} \beta^{i_r}, 
         \dot{x}_1^{\phantom{1}j_1} b_{j_1}, \dots, \dot{x}_s^{\phantom{s}j_s} b_{j_s}
     ) \\
     & = 
     \phi^1_{\phantom{1}i_1}, \dots, \phi^r_{\phantom{r}i_r}, \dot{x}_1^{\phantom{1}j_1} \dots, \dot{x}_s^{\phantom{s}j_s}
-    \Theta(
+    T(
         \beta^{i_1}, \dots, \beta^{i_r}, b_{j_1}, \dots, b_{j_s}
     ),
 ```
@@ -226,10 +226,10 @@ We can identify the basis of a tensor in the tensor space by considering the act
 letting 
 
 ```{math}
-\Theta(
+T(
     \beta^{i_1}, \dots, \beta^{i_r}, b_{j_1}, \dots, b_{j_s}
 ) =
-\Theta^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s},
+T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s},
 ```
 
 and
@@ -251,10 +251,10 @@ e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}
 },
 ```
 
-allows the identification of the decomposition of $\Theta$ as
+allows the identification of the decomposition of $T$ as
 
 ```{math}
-\Theta = \Theta^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} .
+T = T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} .
 ```
 
 The $e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}$ are linearly independent, necessitated by eq. {eq}`eq_tensor_basis`, they provide a basis for tensors of type $(r, s)$. Similarly, it should be apparent that the form of this basis is the direct product
@@ -265,17 +265,65 @@ e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}
 b_{i_1} \otimes \dots \otimes b_{i_r} \otimes \beta^{j_1} \otimes \dots \otimes \beta^{j_s}.
 ```
 
-The $\Theta^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} \in \mathbb{R}$ are the components of the tensor relative to the chosen basis. The change of basis for the basis vectors of a tensor follows from eq. {eq}`eq_basis_transform` and eq. {eq}`eq_dual_basis_transform`, which implies the transformation of the components
+The $T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} \in \mathbb{R}$ are the components of the tensor relative to the chosen basis. The change of basis for the basis vectors of a tensor follows from eq. {eq}`eq_basis_transform` and eq. {eq}`eq_dual_basis_transform`, which implies the transformation of the components
 
 ```{math}
-\Theta^{i^\prime_1, \dots, i^\prime_r}_{\phantom{i^\prime_1, \dots, i^\prime_r} j^\prime_1, \dots, j^\prime_s}
+T^{i^\prime_1, \dots, i^\prime_r}_{\phantom{i^\prime_1, \dots, i^\prime_r} j^\prime_1, \dots, j^\prime_s}
 = {
     \left( \gamma^{-1} \right)^{i^\prime_1}_{\phantom{i^\prime_1}i_1}
     \dots
     \left( \gamma^{-1} \right)^{i^\prime_r}_{\phantom{i^\prime_r}i_r}
-    \left( \gamma \right)^{j_1}_{\phantom{j_1}j^\prime_1}
+    \gamma^{j_1}_{\phantom{j_1}j^\prime_1}
     \dots
-    \left( \gamma \right)^{j_s}_{\phantom{j_s}j^\prime_s}
+    \gamma^{j_s}_{\phantom{j_s}j^\prime_s}
 }
-\Theta^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}.
+T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}.
 ```
+
+### Tensor symmetry
+
+````{admonition} Definition: symmetric or antisymmetric tensor
+
+A tensor of type $(r, s)$ is said to be *symmetric* or *antisymmetric* in its *contravariant* indices if under the exchange of indices
+
+```{math}
+T^{i_1, \dots, i_l, \dots, i_m, \dots,  i_r}_{\phantom{i_1, \dots, i_l, \dots, i_m, \dots,  i_r} j_1, \dots, j_s}
+    =
+    \pm T^{i_1, \dots, i_m, \dots, i_l, \dots,  i_r}_{\phantom{i_1, \dots, i_m, \dots, i_l, \dots,  i_r} j_1, \dots, j_s},
+```
+
+The same property may apply to the *covariant* indices.
+
+````
+
+````{margin}
+```{admonition} Notation
+:class: notation
+There is no difference between $p$ and $s$, however we will differentiate the class of *$(0, s)$ tensors* from the class of *totally antisymmetric $(0, s)$ tensors* by denoting the latter as the class of $(0, p)$ tensors.
+```
+````
+
+The special class of *totally antisymmetric tensors* are the $(0, p)$ covariant tensors, which are antisymmetric under every exchange of indices. That is
+
+```{math}
+T_{i_1, \dots, i_l, \dots, i_m, \dots, i_p} 
+    = 
+    - T_{i_1, \dots, i_m, \dots, i_l, \dots, i_p}.
+```
+
+Any $(0, s)$ tensor may be made totally antisymmetric by applying an alternating operator $\mathcal{A}$
+
+```{math}
+\mathcal{A} T_{i_1, \dots, i_p} 
+    = 
+    \frac{1}{p!} \sum_{\pi \in S_p} \text{sgn}(\pi) \ T_{\pi(i_1), \dots, \pi(i_p)},
+```
+
+where $S_p$ is the [set of $p$ permutations (Wikipedia)](https://en.wikipedia.org/wiki/Symmetric_group). 
+
+The properties of this operator are
+
+- $\mathcal{A} T = T$ if $T$ already totally antisymmetric,
+- $\mathcal{A} T_{i_1, \dots, i_p} = 0 \ \forall \ p > n$.
+
+These totally antisymmetric tensors are called $p$*-forms*, and will be the subject of study in the next section.

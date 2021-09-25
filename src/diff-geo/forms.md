@@ -1,8 +1,6 @@
 (sec_diff_forms)=
 # Differential forms
 
-
-
 ## Alternating real valued $p$-forms
 
 ````{admonition} Definition: Alternating real valued $p$-forms
