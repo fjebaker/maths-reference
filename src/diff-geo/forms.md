@@ -1,5 +1,5 @@
 (sec_diff_forms)=
-# Differential forms
+# Forms
 
 ## Alternating real valued $p$-forms
 
@@ -102,6 +102,13 @@ The properties of the exterior product are
 \varphi \wedge \psi = (-1)^{pq} \psi \wedge \varphi,
 ```
 for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.
+
+The exterior product may also be derived from the extension of the direct product under the action of the alternating operator $\mathcal{A}$ (see {ref}`sec_tensory_symmetry`), that is
+
+```{math}
+:label: eq_alt_op_forms
+\mathcal{A}(\varphi \otimes \psi) = \varphi \wedge \psi.
+```
 
 ### Pull back
 The pullback is an *active transformation* between vector spaces of $p$-forms. 
@@ -282,6 +289,13 @@ For example, consider $n = 3$, the possible bases for different degrees of forms
 \Lambda^1V : & \  \left\{ \beta_1, \ \beta_2, \ \beta_3 \right\}, \\
 \Lambda^2V : & \  \left\{ \beta_1 \wedge \beta_2,  \ \beta_1 \wedge \beta_3, \ \beta_2 \wedge \beta_3 \right\}, \\
 \Lambda^3V : & \  \left\{ \beta_1 \wedge \beta_2 \wedge \beta_3 \right\}.
+```
+
+The basis may also be obtained through use of eq. {eq}`eq_alt_op_forms`, writing
+
+```{math}
+\mathcal{A} \left( \beta_{i_1} \otimes \dots \otimes \beta_{i_p} \right)
+    = \beta_{i_1} \wedge \dots \wedge \beta_{i_p}.
 ```
 
 ### Orientation
