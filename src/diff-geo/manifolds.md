@@ -3,7 +3,7 @@
 
 ## Charts
 
-A manifold $\mathcal{M}$ is a locally flat (Euclidean) open subspace of $\mathbb{R}^n$, which is covered by a collection (union) of open subsets $\mathscr{U}_\alpha$, sometimes referred to as neighbourhoods.
+A manifold $\mathcal{M}$ is a locally flat (Euclidean) open subspace of $\mathbb{R}^n$, which is covered by a collection (union) of open subsets $\mathscr{U}$, sometimes referred to as neighbourhoods.
 
 ````{margin}
 ```{seealso}
@@ -13,27 +13,27 @@ A *homeomorphism* is a topology-preserving isomorphism.
 ````
 
 ````{admonition} Definition: Chart
-A *chart* $\left( \mathscr{U}_\alpha, \phi_\alpha \right)$ on a manifold $\mathcal{M}$ is defined by the open subset $\mathscr{U}_\alpha \subset \mathcal{M}$ and the associated homeomorphism
+A *chart* $\left( \mathscr{U}, \phi_\alpha \right)$ on a manifold $\mathcal{M}$ is defined by the open subset $\mathscr{U} \subset \mathcal{M}$ and the associated homeomorphism
 ```{math}
-\phi_\alpha : \mathscr{U}_\alpha &\rightarrow \mathbb{R}^n, \\
+\phi_\alpha : \mathscr{U} &\rightarrow \mathbb{R}^n, \\
 x &\mapsto \left( x^1, ..., x^n \right),
 ```
-where $x^i$ are the coordinates of $\mathscr{U}_\alpha$.
+where $x^i$ are the coordinates of $\mathscr{U}$.
 ````
 
 
 
-For two intersecting charts, $\left( \mathscr{U}_\alpha, \phi_\alpha \right)$ and $\left( \mathscr{V}_\alpha, \psi_\alpha \right)$, the composition
+For two intersecting charts, $\left( \mathscr{U}, \phi_\alpha \right)$ and $\left( \mathscr{V}, \psi_\alpha \right)$, the composition
 
 ```{math}
 \phi_\alpha \circ \psi_\alpha^{-1} : \mathbb{R}^n &\rightarrow \mathbb{R}^n, \\
 \psi_\alpha (x) & \mapsto \phi_\alpha (x)
 ```
 
-takes points defined in the coordinates of $\mathscr{V}_\alpha$ to those of $\mathscr{U}_\alpha$, i.e. from $\left( \tilde{x}^1, ..., \tilde{x}^n \right) \mapsto \left(x^1, ..., x^n \right)$.
+takes points defined in the coordinates of $\mathscr{V}$ to those of $\mathscr{U}$, i.e. from $\left( \tilde{x}^1, ..., \tilde{x}^n \right) \mapsto \left(x^1, ..., x^n \right)$.
 
 
-In the case of points lying in an intersection of open subsets, $x \in \mathscr{U}_\alpha \cap \mathscr{V}_\alpha$, then, from the definition of the manifold, it is required that $x^i$ are *smooth functions* of $\tilde{x}^i$.
+In the case of points lying in an intersection of open subsets, $x \in \mathscr{U} \cap \mathscr{V}$, then, from the definition of the manifold, it is required that $x^i$ are *smooth functions* of $\tilde{x}^i$.
 
 ````{admonition} Definition: Cartesian product of manifolds
 Two manifolds, $\mathcal{M} \subset \mathbb{R}^n$ and $\mathcal{N} \subset \mathbb{R}^k$, admit a *cartesian product* defined by the set of pairs of points
@@ -42,7 +42,7 @@ Two manifolds, $\mathcal{M} \subset \mathbb{R}^n$ and $\mathcal{N} \subset \math
 ```
 ````
 
-As a corollary, if $\left( \mathscr{U}_\alpha, \phi_\alpha \right)$ and $\left( \mathscr{V}_\alpha, \psi_\alpha \right)$ are distinct charts of $\mathcal{M}$ and $\mathcal{N}$ respectively, and
+As a corollary, if $\left( \mathscr{U}, \phi_\alpha \right)$ and $\left( \mathscr{V}, \psi_\alpha \right)$ are distinct charts of $\mathcal{M}$ and $\mathcal{N}$ respectively, and
 
 ```{math}
 \phi_\alpha(x) &= \left(x^1, ..., x^n \right), \\
@@ -60,9 +60,9 @@ is sufficient to define $\mathcal{M} \times \mathcal{N}$ as a manifold of $n+k$ 
 ## Functions on manifolds
 
 ````{admonition} Definition: Function on a manifold
-A function $f$ on an open subset $\mathscr{U}_\alpha$ of a manifold $\mathcal{M}$ is defined as a map
+A function $f$ on an open subset $\mathscr{U}$ of a manifold $\mathcal{M}$ is defined as a map
 ```{math}
-f: \mathscr{U}_\alpha \rightarrow \mathbb{R}.
+f: \mathscr{U} \rightarrow \mathbb{R}.
 ```
 ````
 
@@ -90,5 +90,5 @@ We may also consider the composition $f \circ Q$, along with $\phi_\alpha \circ 
 =& f\left( x^1(\tau), ..., x^n (\tau) \right)
 ```
 
-where $p$ is the point imaged by $Q(\tau)$ in the open subset $\mathscr{U}_\alpha$.
+where $p$ is the point imaged by $Q(\tau)$ in the open subset $\mathscr{U}$.
 

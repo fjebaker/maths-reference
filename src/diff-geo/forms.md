@@ -1,7 +1,5 @@
 (sec_diff_forms)=
-# Differential forms
-
-
+# Forms
 
 ## Alternating real valued $p$-forms
 
@@ -103,7 +101,14 @@ The properties of the exterior product are
 ```{math}
 \varphi \wedge \psi = (-1)^{pq} \psi \wedge \varphi,
 ```
-for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.$
+for $\varphi \in \Lambda^pV$ and $\psi \in \Lambda^qV$. This last property implies that $\varphi \wedge \varphi = 0$ for the case of $p$ odd.
+
+The exterior product may also be derived from the extension of the direct product under the action of the alternating operator $\mathcal{A}$ (see {ref}`sec_tensory_symmetry`), that is
+
+```{math}
+:label: eq_alt_op_forms
+\mathcal{A}(\varphi \otimes \psi) = \varphi \wedge \psi.
+```
 
 ### Pull back
 The pullback is an *active transformation* between vector spaces of $p$-forms. 
@@ -142,10 +147,35 @@ F^\ast(\varphi \wedge \psi) = \left( F^\ast \varphi \right) \wedge \left( F^\ast
 
 The additional property of the pull-back is
 
-- reverse composition
+- reverse composition,
 ```{math}
-\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1
+:label: eq_pullback_composition
+\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1.
 ```
+
+
+This property can be demonstrated manifestly.
+
+````{toggle}
+We act $\left( F_1 \circ F_2 \right)^\ast$ on a $p$-form $\varphi \in \Lambda^pV$:
+
+```{math}
+\left( F_1 \circ F_2 \right)^\ast \varphi \left( w_1, \dots, w_p \right)
+=
+    \varphi \left( \left( F_1 \circ F_2 \right) w_1, \dots, \left( F_1 \circ F_2 \right) w_p \right),
+```
+
+which, by associativity of homomorphisms, is
+
+```{math}
+&= 
+    F_2^\ast \varphi \left( F_1 w_1, \dots, F_1 w_p \right), \\
+&=
+    \left( F_2^\ast \circ F_1^\ast \right) \varphi \left( w_1, \dots, w_p \right), \\
+```
+
+and therefore the property of eq. {eq}`eq_pullback_composition` holds.
+````
 
 ### Inner derivative
 Sometimes called the interior product.
@@ -227,52 +257,45 @@ The inner derivative is manifestly a derivation, by virtue of the exterior produ
 
 ## Basis
 A basis of $\Lambda^pV$ is the exterior product of the dual basis
+
 ```{math}
 \beta^{i_1} \wedge \beta^{i_2} \wedge \ldots \wedge \beta^{i_p}
 ```
-with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. Consequently
+
+````{margin}
+```{seealso}
+Recall
+:::{math}
+{n \choose k} = \frac{P(n, k)}{k!}
+:::
+
+See more [Wikipedia: Combination](https://en.wikipedia.org/wiki/Combination).
+```
+````
+
+with $1 \leq i_1 < i_2 < \ldots < i_p \leq n = \text{dim}\, V $. 
+
+Consequently, since each $p$-form may be described over an $n$-dimensional basis, the dimensionality of $\Lambda^pV$ is the permutations of $p$ of the $n$ possible basis vectors $\beta^i$, without repetition, due to the alternating property. Therefore, we conclude
+
 ```{math}
 :label: eq_dim_basis
 \text{dim}\, \Lambda^p V = {n \choose p}.
 ```
+
 It is always the case that $\text{dim}\, \Lambda^n V = 1$.
-
-````{admonition} Theorem: Dimension of the exterior algebra
-:class: theorem
-The *exterior algebra* may be expressed as the direct sum 
-```{math}
-\Lambda V := \bigoplus_{p=0}^n \Lambda^p V,
-```
-with dimensionality
-```{math}
-\text{dim}\, \Lambda V = 2^n.
-```
-:::{toggle}
-**Proof:** We begin by noting a result for the dimension of direct sums along with eq. {eq}`eq_dim_basis`
-```{math}
-\text{dim}\, \Lambda V 
-    &= 
-    \sum_{p=0}^n \text{dim}\, \Lambda^p V. \\
-    &= 
-    \sum_{p=0}^n {n \choose p},
-```
-which is just the [binomial theorem](https://en.wikipedia.org/wiki/Binomial_theorem),
-```{math}
-\left( 1 + x \right)^n = \sum_{k=0}^n {n \choose k} x^k,
-```
-for the case of $x = 1$. Therefore:
-```{math}
-\text{dim}\, \Lambda V = 2^n. \ \ \square
-```
-:::
-````
-
 
 For example, consider $n = 3$, the possible bases for different degrees of forms are
 ```{math}
 \Lambda^1V : & \  \left\{ \beta_1, \ \beta_2, \ \beta_3 \right\}, \\
 \Lambda^2V : & \  \left\{ \beta_1 \wedge \beta_2,  \ \beta_1 \wedge \beta_3, \ \beta_2 \wedge \beta_3 \right\}, \\
 \Lambda^3V : & \  \left\{ \beta_1 \wedge \beta_2 \wedge \beta_3 \right\}.
+```
+
+The basis may also be obtained through use of eq. {eq}`eq_alt_op_forms`, writing
+
+```{math}
+\mathcal{A} \left( \beta_{i_1} \otimes \dots \otimes \beta_{i_p} \right)
+    = \beta_{i_1} \wedge \dots \wedge \beta_{i_p}.
 ```
 
 ### Orientation
