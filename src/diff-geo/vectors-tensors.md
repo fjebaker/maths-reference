@@ -137,6 +137,7 @@ is the action of the tangent mapping, as by the chain rule we know
     \right\rvert_{Q(\tau)} \frac{\text{d}Q^i}{\text{d} \tau}.
 ```
 
+(sec_frames)=
 ## Frames
 
 ````{margin}
@@ -235,6 +236,27 @@ and therefore identify the transformation between dual bases as
 \beta^{\prime i} = \gamma^i_{\phantom{i} j} \beta^j,
 ```
 where the matrix $\gamma$ is the inverse of the $\gamma^{-1}$ seen in eq. {eq}`eq_basis_transform`, which can be easily verified with eq. {eq}`eq_bases_relation`.
+
+
+````{admonition} Notation
+:class: notation
+
+There exists often some confusion over the use of the terminology *covariant* and *contravariant*, and how it relates to the symbols we discuss. In physics, these words describe how the vector components change when the basis changes.
+
+For example, the vector
+```{math}
+v = v^i b_i,
+```
+is a *contravariant* vector; were the length of the basis $b_i$ doubled, the vector components would have to be halved, changing in the opposite (contra-) direction. We can then express the *covariant* vector through
+```{math}
+v_i = v \cdot b_i,
+```
+or
+```{math}
+v = v_i \beta^i,
+```
+where it is apparent that the covariant vector varies along with (co-) the basis $b_i$.
+````
 
 ## Tensors
 Given a point $x$ in an open subspace $\mathscr{U} \subset \mathbb{R}^n$, with tensor space $T_x \mathscr{U}$ and cotangent space $T^\ast_x \mathscr{U}$, we may define the cartesian product

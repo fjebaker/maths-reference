@@ -292,17 +292,19 @@ It is always the case that $\text{dim}\, \Lambda^n V = 1$.
 
 For example, consider $n = 3$, the possible bases for different degrees of forms are
 ```{math}
-\Lambda^1V : & \  \left\{ \beta_1, \ \beta_2, \ \beta_3 \right\}, \\
-\Lambda^2V : & \  \left\{ \beta_1 \wedge \beta_2,  \ \beta_1 \wedge \beta_3, \ \beta_2 \wedge \beta_3 \right\}, \\
-\Lambda^3V : & \  \left\{ \beta_1 \wedge \beta_2 \wedge \beta_3 \right\}.
+\Lambda^1V : & \  \left\{ \beta^1, \ \beta^2, \ \beta^3 \right\}, \\
+\Lambda^2V : & \  \left\{ \beta^1 \wedge \beta^2,  \ \beta^1 \wedge \beta^3, \ \beta^2 \wedge \beta^3 \right\}, \\
+\Lambda^3V : & \  \left\{ \beta^1 \wedge \beta^2 \wedge \beta^3 \right\}.
 ```
 
 The basis may also be obtained through use of eq. {eq}`eq_alt_op_forms`, writing
 
 ```{math}
-\mathcal{A} \left( \beta_{i_1} \otimes \dots \otimes \beta_{i_p} \right)
-    = \beta_{i_1} \wedge \dots \wedge \beta_{i_p}.
+\mathcal{A} \left( \beta^{i_1} \otimes \dots \otimes \beta^{i_p} \right)
+    = \beta^{i_1} \wedge \dots \wedge \beta^{i_p}.
 ```
+
+Note that a set of such a basis is referred to as a *frame*, using the same terminology as in {ref}`sec_frames`. 
 
 ### Orientation
 ````{admonition} Definition: Orientation
@@ -326,3 +328,61 @@ Given an orientation $\omega$, then a basis $b_i$ is oriented if
 ```
 
 Orientations become very useful when we discuss integration in the next chapter.
+
+
+## Differential forms
+
+````{margin}
+```{admonition} Notation
+:class: notation
+
+You may very well also write this set as
+:::{math}
+\Lambda^p \left( \mathscr{U}, \Lambda^p T_x \mathscr{U} \right),
+:::
+however this notation quickly becomes tedious, so often the shorthand $\Lambda^p \mathscr{U}$ is adopted.
+
+```
+````
+
+````{admonition} Definition: Differential $p$-form
+
+For a point $x$ in some open subset $\mathscr{U} \subset \mathbb{R}^n$, and its corresponding tangent space $T_x \mathscr{U}$, the differential $p$-forms are the mappings
+
+```{math}
+\varphi : \ 
+    \mathscr{U} &\rightarrow \Lambda^p T_x \mathscr{U}, \\
+    x &\mapsto \varphi_x.
+```
+
+The set of these mappings is denoted $\Lambda^p \mathscr{U}$.
+````
+
+Differential forms inherit the properties of alternating forms, and similarly use the notation 
+
+```{math}
+\Lambda \mathscr{U} :=
+    \bigoplus_{p=0}^n \Lambda^p \mathscr{U},
+```
+
+to define the direct sum.
+
+A noteworthy set of differential forms are 
+
+- those mapping to $\Lambda^p T_x \mathscr{U} = \mathbb{R}$ , so that $\Lambda^p \mathscr{U}$ is the set of smooth functions on $\mathscr{U}$,
+- the cotangent space denoted $\left( T_x \mathscr{U} \right)^\ast = \Lambda^1  T_x \mathscr{U}$.
+
+
+The primary difference between alternating forms and differential forms is that in the latter, everything is defined pointwise on $x \in \mathscr{U}$ ; as such, given a frame $b_i$, the basis of $T_x \mathscr{U}$ induced is $b_i (x)$, and consequently the basis of the cotangent space $\left( T_x \mathscr{U} \right)^\ast$ is $\beta^i (x)$, implying the transformation eq. {eq}`eq_dual_basis_transform` extends as
+
+```{math}
+\beta^{\prime i}(x) = 
+    \gamma (x)^i_{\phantom{i}j} \beta^j(x).
+```
+
+In the case of a frame $\frac{\partial}{\partial x^i}$, the dual frame is written $\text{d}x^i$, which omits the argument $x$. We then find the analogue of eq. {eq}`eq_bases_relation` as
+
+```{math}
+\text{d}x^i \left( \frac{\partial}{\partial x^j} \right) =  \delta^i_{\phantom{i}j},
+```
+with $\delta^i_{\phantom{i}j}$ being a constant function for all $x$.
