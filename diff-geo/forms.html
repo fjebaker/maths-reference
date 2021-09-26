@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.3. Forms &#8212; Mathematics Reference</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathematics.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mathematics.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.4. Component expansions" href="components.html" />
+    <link rel="prev" title="2.2. Vectors and tensors" href="vectors-tensors.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics Reference</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../titlepage.html">
+   Mathematics Reference
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Differential Geometry
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../vectorspaces/outline.html">
+   1. Linear Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vectorspaces/linear-transformations.html">
+     1.1. Linear transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vectorspaces/vector-spaces.html">
+     1.2. Vector spaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="outline.html">
+   2. Differential Geometry
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="manifolds.html">
+     2.1. Manifolds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vectors-tensors.html">
+     2.2. Vectors and tensors
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.3. Forms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components.html">
+     2.4. Component expansions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../glossary/glossary.html">
+   3. Glossary
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/algebras.html">
+     3.1. Algebras
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/diff-geo/forms.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fjebaker/maths-reference"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fjebaker/maths-reference/issues/new?title=Issue%20on%20page%20%2Fdiff-geo/forms.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fjebaker/maths-reference/edit/master/diff-geo/forms.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternating-real-valued-p-forms">
+   2.3.1. Alternating real valued
+   <span class="math notranslate nohighlight">
+    \(p\)
+   </span>
+   -forms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-space-valued-p-forms">
+     2.3.1.1. Vector space valued
+     <span class="math notranslate nohighlight">
+      \(p\)
+     </span>
+     -forms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lie-algebra-valued-p-forms">
+     2.3.1.2. Lie algebra valued
+     <span class="math notranslate nohighlight">
+      \(p\)
+     </span>
+     -forms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operations">
+   2.3.2. Operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exterior-product">
+     2.3.2.1. Exterior product
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pull-back">
+     2.3.2.2. Pull back
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inner-derivative">
+     2.3.2.3. Inner derivative
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basis">
+   2.3.3. Basis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orientation">
+     2.3.3.1. Orientation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differential-forms">
+   2.3.4. Differential forms
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="forms">
+<span id="sec-diff-forms"></span><h1><span class="section-number">2.3. </span>Forms<a class="headerlink" href="#forms" title="Permalink to this headline">¶</a></h1>
+<p>We will principally examine two types of forms, namely <em>alternating</em> forms, and <em>differential</em> forms. As differential forms are a specialization of alternating forms, we will focus on defining and examining these only later. Instead, we begin by introducing alternating forms as <span class="math notranslate nohighlight">\((0, p)\)</span> tensors, along with operations on these objects.</p>
+<p>Many of these ideas may be discussed fairly abstractly, and indeed, it may be argued it is easier to discuss the general actions of forms, to gain a familiarly with their behaviour, before providing a representation or decomposition. This is precisely what we will do here – to introduce a basis for alternating forms, we first define what a form is, operations on and with forms, and finally how the basis may be expressed in term of this language. This may feel a little abstract at first, but unfortunately we require some ground work to appreciate the physical significance of these objects.</p>
+<p>This section will occupy itself with alternating forms, and introduce the differential form towards the end. This will set us up with a good foundation for discussing the exterior derivative and integration in the next section, before moving on to a detailed look at the metric.</p>
+<div class="section" id="alternating-real-valued-p-forms">
+<h2><span class="section-number">2.3.1. </span>Alternating real valued <span class="math notranslate nohighlight">\(p\)</span>-forms<a class="headerlink" href="#alternating-real-valued-p-forms" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-definition-alternating-real-valued-p-forms admonition">
+<p class="admonition-title">Definition: Alternating real valued <span class="math notranslate nohighlight">\(p\)</span>-forms</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space, then the alternating real-valued forms of degree <span class="math notranslate nohighlight">\(p\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\Lambda^p V := \left\{ \varphi : \underbrace{V \times V \times \ldots \times V}_{p} \rightarrow \mathbb{R}, \ \text{multilinear, alternating} \right\}.\]</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><span class="math notranslate nohighlight">\(S_n\)</span> is the symmetric group, which, defined over <span class="math notranslate nohighlight">\(n\)</span> symbols, is the set of permutations of <span class="math notranslate nohighlight">\(n\)</span> symbols.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Symmetric_group">Wikipedia: Symmetric Group</a>.</p>
+</div>
+</div>
+<p>Here, <em>multilinear</em> is equivalent to linear in each argument, and <em>alternating</em> implies for <span class="math notranslate nohighlight">\(\pi \in S_n\)</span></p>
+<div class="math notranslate nohighlight">
+\[\varphi  \left( v_{\pi (1)}, v_{\pi (2)}, \ldots, v_{\pi (n) } \right) = \text{sgn}( \pi ) \varphi  \left( v_{1}, v_{2}, \ldots, v_{n} \right).\]</div>
+<p>There are a few noteworthy properties:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Lambda^0 V = \mathbb{R}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Lambda^1 V = V^\ast\)</span>, the space of <span class="math notranslate nohighlight">\(1\)</span>-forms on <span class="math notranslate nohighlight">\(V\)</span> <em>is</em> the dual space of <span class="math notranslate nohighlight">\(V\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Lambda^p V = 0, \ \ \forall \ p &gt; n = \text{dim}\, V\)</span>.</p></li>
+</ul>
+<p>The last property can be reasoned given that the forms are alternating, and the degenerate choice of <span class="math notranslate nohighlight">\(v \in V\)</span> arguments for <span class="math notranslate nohighlight">\(p &gt; n\)</span>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The space of <span class="math notranslate nohighlight">\(p\)</span>-forms <span class="math notranslate nohighlight">\(\Lambda^pV\)</span> is <em>itself</em> a vector space.</p>
+</div>
+<div class="section" id="vector-space-valued-p-forms">
+<h3><span class="section-number">2.3.1.1. </span>Vector space valued <span class="math notranslate nohighlight">\(p\)</span>-forms<a class="headerlink" href="#vector-space-valued-p-forms" title="Permalink to this headline">¶</a></h3>
+<p>Real valued alternating forms may be generalized to have vector space codomains.</p>
+<div class="admonition-definition-alternating-vector-space-valued-p-forms admonition">
+<p class="admonition-title">Definition: Alternating vector space valued <span class="math notranslate nohighlight">\(p\)</span>-forms</p>
+<p>Let <span class="math notranslate nohighlight">\(V, W\)</span> be vector spaces, then the alternating vector space valued forms of degree <span class="math notranslate nohighlight">\(p\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\Lambda^p (V,W) := \left\{ \varphi : \underbrace{V \times V \times \ldots \times V}_{p} \rightarrow W, \ \text{multilinear, alternating} \right\}.\]</div>
+</div>
+<p>This permits the decomposition of any <span class="math notranslate nohighlight">\(\varphi \in \Lambda^p (V, W)\)</span> onto a basis <span class="math notranslate nohighlight">\(a_i\)</span> of <span class="math notranslate nohighlight">\(W\)</span></p>
+<div class="math notranslate nohighlight">
+\[\varphi = \varphi^a a_a,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\varphi^a \in \Lambda^pV\)</span>.</p>
+</div>
+<div class="section" id="lie-algebra-valued-p-forms">
+<h3><span class="section-number">2.3.1.2. </span>Lie algebra valued <span class="math notranslate nohighlight">\(p\)</span>-forms<a class="headerlink" href="#lie-algebra-valued-p-forms" title="Permalink to this headline">¶</a></h3>
+<p>There is a special case where <span class="math notranslate nohighlight">\(W\)</span> may be a Lie algebra; then the form is decomposed onto the generators of the algebra <span class="math notranslate nohighlight">\(T_a\)</span>, and the exterior product operator is replaced by commutators on the basis. Consider <span class="math notranslate nohighlight">\(\varphi \in \Lambda^p (V, \mathfrak{g})\)</span> and <span class="math notranslate nohighlight">\(\psi \in \Lambda^q (V, \mathfrak{g})\)</span>, decomposed as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\varphi &amp;= \varphi^a T_a, \\
+\psi &amp;= \psi^b T_b,\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\varphi^a \in \Lambda^p V\)</span>, <span class="math notranslate nohighlight">\(\psi^b \in \Lambda^q V\)</span>. We then redefine the exterior product by using the exterior product of the generators of the Lie algebra</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[ \varphi, \psi \right] &amp;= \varphi^a \wedge \psi^b \left[ T_a, T_b \right] \\
+&amp;= -(-1)^{pq} \left[ \varphi, \psi \right].\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="operations">
+<h2><span class="section-number">2.3.2. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exterior-product">
+<h3><span class="section-number">2.3.2.1. </span>Exterior product<a class="headerlink" href="#exterior-product" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition-exterior-product admonition">
+<p class="admonition-title">Definition: Exterior product</p>
+<p>Let <span class="math notranslate nohighlight">\(\varphi \in \Lambda^p V\)</span> and <span class="math notranslate nohighlight">\(\psi \in \Lambda^q V\)</span> be  real-valued alternating forms of degree <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> respectively on a vector space <span class="math notranslate nohighlight">\(V\)</span>. Their <em>exterior product</em> is defined</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\wedge : \Lambda^p V \times \Lambda^q V \rightarrow &amp; \, \Lambda^{p+q}V, \\
+(\varphi, \psi) \mapsto &amp; \, \varphi \wedge \psi.\end{split}\]</div>
+<p>Acting on vectors in <span class="math notranslate nohighlight">\(V\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\varphi \wedge \psi) \left( v_1, \ldots, v_{p + q} \right) := &amp; \\ 
+\frac{1}{p! q!} \sum_{\pi \in S_{p+q} }  \text{sgn} (\pi)\, \varphi \left( v_{\pi (1)}, \ldots, v_{\pi (p)} \right) &amp; \psi \left( v_{\pi (p + 1)}, v_{\pi (p + q)} \right).\end{split}\]</div>
+</div>
+<p>If <span class="math notranslate nohighlight">\(\varphi, \psi \in \Lambda^0V\)</span>, then <span class="math notranslate nohighlight">\(\varphi \wedge \psi = \varphi \, \psi \in \mathbb{R}\)</span>.</p>
+<p>Geometrically, we can consider the exterior product of <span class="math notranslate nohighlight">\(\varphi, \psi \in \Lambda^1V\)</span> as the determinant</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\varphi \wedge \psi) \left( v_1, v_2 \right) = &amp; \ 
+\text{det} \, \begin{bmatrix}
+    \varphi(v_1) &amp; \psi(v_1) \\
+    \varphi(v_2) &amp; \psi(v_2)
+\end{bmatrix}, \\ \\
+= &amp; \ \varphi (v_1) \psi (v_2) - \varphi (v_2) \psi (v_1).\end{split}\]</div>
+<p>The properties of the exterior product are</p>
+<ul class="simple">
+<li><p>bilinearity,</p></li>
+<li><p>associativity,</p></li>
+<li><p>graded commutivity:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\varphi \wedge \psi = (-1)^{pq} \psi \wedge \varphi,\]</div>
+<p>for <span class="math notranslate nohighlight">\(\varphi \in \Lambda^pV\)</span> and <span class="math notranslate nohighlight">\(\psi \in \Lambda^qV\)</span>. This last property implies that <span class="math notranslate nohighlight">\(\varphi \wedge \varphi = 0\)</span> for the case of <span class="math notranslate nohighlight">\(p\)</span> odd.</p>
+<p>The exterior product may also be derived from the extension of the direct product under the action of the alternating operator <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> (see <a class="reference internal" href="vectors-tensors.html#sec-tensory-symmetry"><span class="std std-ref">Tensor symmetry</span></a>), that is</p>
+<div class="math notranslate nohighlight" id="equation-eq-alt-op-forms">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-alt-op-forms" title="Permalink to this equation">¶</a></span>\[\mathcal{A}(\varphi \otimes \psi) = \varphi \wedge \psi.\]</div>
+</div>
+<div class="section" id="pull-back">
+<h3><span class="section-number">2.3.2.2. </span>Pull back<a class="headerlink" href="#pull-back" title="Permalink to this headline">¶</a></h3>
+<p>The pullback is an <em>active transformation</em> between vector spaces of <span class="math notranslate nohighlight">\(p\)</span>-forms.</p>
+<div class="admonition-definition-pull-back admonition">
+<p class="admonition-title">Definition: Pull back</p>
+<p>Let <span class="math notranslate nohighlight">\(F: W \rightarrow V\)</span> be a linear transformation between two vector spaces <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\(V\)</span>. The <em>pull back</em> <span class="math notranslate nohighlight">\(F^\ast\)</span> is the induced linear mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^\ast :
+    \Lambda^p V &amp; \rightarrow \Lambda^p W, \\
+    \varphi &amp; \mapsto F^\ast \varphi,\end{split}\]</div>
+<p>via</p>
+<div class="math notranslate nohighlight">
+\[(F^\ast \varphi) \left( w_1, \dots, w_p \right)
+    :=
+    \varphi \left( F w_1, \dots, F w_p \right).\]</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The pull back stems from a <em>contravariant functor</em>, which, in mathematical category theory, has a different meaning from the terminology used in physics.</p>
+<p>See more <a class="reference external" href="https://en.wikipedia.org/wiki/Functor#Covariance_and_contravariance">Wikipedia: Functors</a>.</p>
+</div>
+</div>
+<p>The pull back is a <em>homomorphism</em> of the exterior algebras; that is to say</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F^\ast\)</span> is linear,</p></li>
+<li><p>distributive:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[F^\ast(\varphi \wedge \psi) = \left( F^\ast \varphi \right) \wedge \left( F^\ast \psi \right).\]</div>
+<p>The additional property of the pull-back is</p>
+<ul class="simple">
+<li><p>reverse composition,</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-pullback-composition">
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-pullback-composition" title="Permalink to this equation">¶</a></span>\[\left( F_1 \circ F_2 \right)^\ast = F^\ast_2 \circ F^\ast_1.\]</div>
+<p>This property can be demonstrated manifestly.</p>
+<div class="toggle docutils container">
+<p>We act <span class="math notranslate nohighlight">\(\left( F_1 \circ F_2 \right)^\ast\)</span> on a <span class="math notranslate nohighlight">\(p\)</span>-form <span class="math notranslate nohighlight">\(\varphi \in \Lambda^pV\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left( F_1 \circ F_2 \right)^\ast \varphi \left( w_1, \dots, w_p \right)
+=
+    \varphi \left( \left( F_1 \circ F_2 \right) w_1, \dots, \left( F_1 \circ F_2 \right) w_p \right),\]</div>
+<p>which, by associativity of homomorphisms, is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;= 
+    F_2^\ast \varphi \left( F_1 w_1, \dots, F_1 w_p \right), \\
+&amp;=
+    \left( F_2^\ast \circ F_1^\ast \right) \varphi \left( w_1, \dots, w_p \right), \\\end{split}\]</div>
+<p>and therefore the property of eq. <a class="reference internal" href="#equation-eq-pullback-composition">(2.8)</a> holds.</p>
+</div>
+</div>
+<div class="section" id="inner-derivative">
+<h3><span class="section-number">2.3.2.3. </span>Inner derivative<a class="headerlink" href="#inner-derivative" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes called the interior product.</p>
+<div class="admonition-definition-inner-derivative admonition">
+<p class="admonition-title">Definition: Inner derivative</p>
+<p>Let <span class="math notranslate nohighlight">\(\Lambda^p V\)</span> be the space of alternating <span class="math notranslate nohighlight">\(p\)</span> forms on <span class="math notranslate nohighlight">\(V\)</span>. The <em>inner derivative</em> is defined</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\iota_v : \Lambda^p V \rightarrow &amp; \, \Lambda^{p-1}V, \\
+\varphi \mapsto &amp; \, \iota_v \varphi,\end{split}\]</div>
+<p>for some <span class="math notranslate nohighlight">\(v \in V\)</span>. Acting on vectors <span class="math notranslate nohighlight">\(v_i \in V\)</span></p>
+<div class="math notranslate nohighlight">
+\[(\iota_v \varphi)(v_{1}, \ldots, v_{p-1}) := \varphi (v, v_q, \ldots, v_{p-1}).\]</div>
+</div>
+<p>The inner derivative is a contraction, which acts to fix a vector that <span class="math notranslate nohighlight">\(\varphi\)</span> acts on, by definition.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The <a class="reference internal" href="../glossary/algebras.html#sec-grassman"><span class="std std-ref">Grassman algebra</span></a> is the direct sum of vector spaces</p>
+<div class="math notranslate nohighlight">
+\[\Lambda V := \bigoplus_{p=0}^n \Lambda^p V.\]</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(\iota_v\)</span> is a <a class="reference external" href="https://en.wikipedia.org/wiki/Derivation_(differential_algebra)">derivation</a> of the Grassman algebra <span class="math notranslate nohighlight">\(\Lambda V\)</span>. The inner derivative has the following properties</p>
+<ul class="simple">
+<li><p>linear map,</p></li>
+<li><p>linear in <span class="math notranslate nohighlight">\(v\)</span>, e.g. <span class="math notranslate nohighlight">\(\iota_{v+u} = \iota_{v} + \iota_{u}\)</span>,</p></li>
+<li><p>graded Leibniz rule, namely for some <span class="math notranslate nohighlight">\(\varphi \in \Lambda^pV\)</span> and <span class="math notranslate nohighlight">\(\psi \in \Lambda^qV\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\iota_v(\varphi \wedge \psi) = (\iota_v \varphi) \wedge \psi + (-1)^p \varphi \wedge (\iota_v \psi)\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\iota_v \iota_u + \iota_u \iota_v = 0\)</span>, corollary <span class="math notranslate nohighlight">\(\iota_v^2 = 0\)</span></p></li>
+</ul>
+<p>The last point follows from the alternating property of forms.</p>
+<div class="query admonition">
+<p class="admonition-title">Inner derivative</p>
+<p>Is the classification of the inner derivative manifestly a <em>derivation</em> (i.e. obeys Leibniz)?</p>
+<p>Without explicitly using the Leibniz property, we can derive the behaviour of the inner derivative when operating on the exterior product of forms.</p>
+<div class="toggle docutils container">
+<p>This is best approached by first expanding the wedge product.</p>
+<p>We will consider <span class="math notranslate nohighlight">\(\varphi \in \Lambda^pV\)</span> and <span class="math notranslate nohighlight">\(\psi \in \Lambda^qV\)</span>. Let <span class="math notranslate nohighlight">\(v_i \in V\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\iota_{v_1} (\varphi \wedge \psi) (v_2, \ldots, v_{p+q}) = (\varphi \wedge \psi) (v_1, v_2, \ldots, v_{p+q}), \]</div>
+<p>by definition. Expanding the RHS</p>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{p! q!} \sum_{\pi \in S_{p+q}} \text{sgn}(\pi) \varphi (v_{\pi (1)}, \ldots, v_{\pi(p)}) \psi (v_{\pi (p+1)}, \ldots, v_{\pi(p+q)}),\]</div>
+<p>Now we use that the inner derivative fixes a vector argument; we can rewrite the sum into two parts, namely those terms where <span class="math notranslate nohighlight">\(\varphi\)</span> acts on <span class="math notranslate nohighlight">\(v_1\)</span>, and those where <span class="math notranslate nohighlight">\(\psi\)</span> does:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}= \frac{p}{p! q!} &amp; \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) \varphi (v_{1}, v_{\pi(1)}, \ldots, v_{\pi(p-1)}) \psi (v_{\pi (p)}, \ldots, v_{\pi(p+q-1)}) \\
++  \frac{q}{p! q!} (-1)^p &amp; \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) \varphi (v_{\pi (1)}, \ldots, v_{\pi(p)}) \psi (v_{1}, v_{\pi(p+1)}, \ldots, v_{\pi(p+q-1)}) ,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\((-1)^p\)</span> is a continuity factor to account for the initial sign of <span class="math notranslate nohighlight">\(\pi\)</span> in the second summation term; effectively, there are <span class="math notranslate nohighlight">\(p\)</span> permutations of <span class="math notranslate nohighlight">\(\pi\)</span> before <span class="math notranslate nohighlight">\(\psi\)</span> acts on <span class="math notranslate nohighlight">\(v_1\)</span>.</p>
+<p>Note the factors of <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> on each term. This is from combinatorics; if <span class="math notranslate nohighlight">\(D(n)\)</span> denotes the number of permutations of <span class="math notranslate nohighlight">\(n\)</span>, then an <span class="math notranslate nohighlight">\(n\)</span> permutation with a single fixed point is <span class="math notranslate nohighlight">\(n D(n-1)\)</span>.</p>
+<p>Now apply the definition of the inner derivative again</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}= \frac{p}{p! q!} &amp; \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) (\iota_{v_1} \varphi) (v_{\pi(1)}, \ldots, v_{\pi(p-1)}) \psi (v_{\pi (p)}, \ldots, v_{\pi(p+q-1)}) \\
++  \frac{q}{p! q!} (-1)^p &amp; \sum_{\pi \in S_{p+q-1}} \text{sgn}(\pi) \varphi (v_{\pi (1)}, \ldots, v_{\pi(p)}) (\iota_{v_1}\psi) (v_{\pi(p+1)}, \ldots, v_{\pi(p+q-1)}).\end{split}\]</div>
+<p>Then, by noting that <span class="math notranslate nohighlight">\(p/p! = 1/(p-1)!\)</span>, we can replace the expansions with wedge products again</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}=&amp; \, \left((\iota_{v_1} \varphi) \wedge \psi \right) (v_2, \ldots, v_{p+q}) \\
+&amp; \, + (-1)^p \left(\varphi \wedge ( \iota_{v_1} \psi) \right)(v_2, \ldots, v_{p+q})\end{split}\]</div>
+<p>which is precisely the graded Leibniz rule.</p>
+<p>The inner derivative is manifestly a derivation, by virtue of the exterior product.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="basis">
+<h2><span class="section-number">2.3.3. </span>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h2>
+<p>A basis of <span class="math notranslate nohighlight">\(\Lambda^pV\)</span> is the exterior product of the dual basis</p>
+<div class="math notranslate nohighlight">
+\[\beta^{i_1} \wedge \beta^{i_2} \wedge \ldots \wedge \beta^{i_p}\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Recall</p>
+<div class="math notranslate nohighlight">
+\[{n \choose k} = \frac{P(n, k)}{k!}\]</div>
+<p>See more <a class="reference external" href="https://en.wikipedia.org/wiki/Combination">Wikipedia: Combination</a>.</p>
+</div>
+</div>
+<p>with <span class="math notranslate nohighlight">\(1 \leq i_1 &lt; i_2 &lt; \ldots &lt; i_p \leq n = \text{dim}\, V \)</span>.</p>
+<p>Consequently, since each <span class="math notranslate nohighlight">\(p\)</span>-form may be described over an <span class="math notranslate nohighlight">\(n\)</span>-dimensional basis, the dimensionality of <span class="math notranslate nohighlight">\(\Lambda^pV\)</span> is the permutations of <span class="math notranslate nohighlight">\(p\)</span> of the <span class="math notranslate nohighlight">\(n\)</span> possible basis vectors <span class="math notranslate nohighlight">\(\beta^i\)</span>, without repetition, due to the alternating property. Therefore, we conclude</p>
+<div class="math notranslate nohighlight" id="equation-eq-dim-basis">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-dim-basis" title="Permalink to this equation">¶</a></span>\[\text{dim}\, \Lambda^p V = {n \choose p}.\]</div>
+<p>It is always the case that <span class="math notranslate nohighlight">\(\text{dim}\, \Lambda^n V = 1\)</span>.</p>
+<p>For example, consider <span class="math notranslate nohighlight">\(n = 3\)</span>, the possible bases for different degrees of forms are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda^1V : &amp; \  \left\{ \beta^1, \ \beta^2, \ \beta^3 \right\}, \\
+\Lambda^2V : &amp; \  \left\{ \beta^1 \wedge \beta^2,  \ \beta^1 \wedge \beta^3, \ \beta^2 \wedge \beta^3 \right\}, \\
+\Lambda^3V : &amp; \  \left\{ \beta^1 \wedge \beta^2 \wedge \beta^3 \right\}.\end{split}\]</div>
+<p>The basis may also be obtained through use of eq. <a class="reference internal" href="#equation-eq-alt-op-forms">(2.7)</a>, writing</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{A} \left( \beta^{i_1} \otimes \dots \otimes \beta^{i_p} \right)
+    = \beta^{i_1} \wedge \dots \wedge \beta^{i_p}.\]</div>
+<p>Note that a set of such a basis is referred to as a <em>frame</em>, using the same terminology as in <a class="reference internal" href="vectors-tensors.html#sec-frames"><span class="std std-ref">Frames</span></a>.</p>
+<div class="section" id="orientation">
+<h3><span class="section-number">2.3.3.1. </span>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition-orientation admonition">
+<p class="admonition-title">Definition: Orientation</p>
+<p>An <em>orientation</em> of vector space <span class="math notranslate nohighlight">\(V\)</span> with <span class="math notranslate nohighlight">\(n = \text{dim} \, V\)</span> is the choice of one of the two parts of <span class="math notranslate nohighlight">\(\Lambda^nV - \{0\}\)</span>.</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>This can be thought of it terms of chirality: <a class="reference external" href="https://en.wikipedia.org/wiki/Orientation_(vector_space)">Wikipedia: Orientation</a>.</p>
+</div>
+</div>
+<p>An orientation is the choice of a positive or negative slice of <span class="math notranslate nohighlight">\(\omega \in \Lambda^nV\)</span>. It may be defined by the choice of basis <span class="math notranslate nohighlight">\(b_i\)</span> on <span class="math notranslate nohighlight">\(V\)</span></p>
+<div class="math notranslate nohighlight">
+\[\omega = \beta^1 \wedge \ldots \wedge \beta^n.\]</div>
+<p>Given an orientation <span class="math notranslate nohighlight">\(\omega\)</span>, then a basis <span class="math notranslate nohighlight">\(b_i\)</span> is oriented if</p>
+<div class="math notranslate nohighlight">
+\[\omega \left( b_1, \ldots, b_n \right) &gt; 0.\]</div>
+<p>Orientations become very useful when we discuss integration in the next chapter.</p>
+</div>
+</div>
+<div class="section" id="differential-forms">
+<h2><span class="section-number">2.3.4. </span>Differential forms<a class="headerlink" href="#differential-forms" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="notation admonition">
+<p class="admonition-title">Notation</p>
+<p>You may very well also write this set as</p>
+<div class="math notranslate nohighlight">
+\[\Lambda^p \left( \mathscr{U}, \Lambda^p T_x \mathscr{U} \right),\]</div>
+<p>however this notation quickly becomes tedious, so often the shorthand <span class="math notranslate nohighlight">\(\Lambda^p \mathscr{U}\)</span> is adopted.</p>
+</div>
+</div>
+<div class="admonition-definition-differential-p-form admonition">
+<p class="admonition-title">Definition: Differential <span class="math notranslate nohighlight">\(p\)</span>-form</p>
+<p>For a point <span class="math notranslate nohighlight">\(x\)</span> in some open subset <span class="math notranslate nohighlight">\(\mathscr{U} \subset \mathbb{R}^n\)</span>, and its corresponding tangent space <span class="math notranslate nohighlight">\(T_x \mathscr{U}\)</span>, the differential <span class="math notranslate nohighlight">\(p\)</span>-forms are the mappings</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\varphi : \ 
+    \mathscr{U} &amp;\rightarrow \Lambda^p T_x \mathscr{U}, \\
+    x &amp;\mapsto \varphi_x.\end{split}\]</div>
+<p>The set of these mappings is denoted <span class="math notranslate nohighlight">\(\Lambda^p \mathscr{U}\)</span>.</p>
+</div>
+<p>Differential forms inherit the properties of alternating forms, and similarly use the notation</p>
+<div class="math notranslate nohighlight">
+\[\Lambda \mathscr{U} :=
+    \bigoplus_{p=0}^n \Lambda^p \mathscr{U},\]</div>
+<p>to define the direct sum.</p>
+<p>A noteworthy set of differential forms are</p>
+<ul class="simple">
+<li><p>those mapping to <span class="math notranslate nohighlight">\(\Lambda^p T_x \mathscr{U} = \mathbb{R}\)</span> , so that <span class="math notranslate nohighlight">\(\Lambda^p \mathscr{U}\)</span> is the set of smooth functions on <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>,</p></li>
+<li><p>the cotangent space denoted <span class="math notranslate nohighlight">\(\left( T_x \mathscr{U} \right)^\ast = \Lambda^1  T_x \mathscr{U}\)</span>.</p></li>
+</ul>
+<p>The primary difference between alternating forms and differential forms is that in the latter, everything is defined pointwise on <span class="math notranslate nohighlight">\(x \in \mathscr{U}\)</span> ; as such, given a frame <span class="math notranslate nohighlight">\(b_i\)</span>, the basis of <span class="math notranslate nohighlight">\(T_x \mathscr{U}\)</span> induced is <span class="math notranslate nohighlight">\(b_i (x)\)</span>, and consequently the basis of the cotangent space <span class="math notranslate nohighlight">\(\left( T_x \mathscr{U} \right)^\ast\)</span> is <span class="math notranslate nohighlight">\(\beta^i (x)\)</span>, implying the transformation eq. <a class="reference internal" href="vectors-tensors.html#equation-eq-dual-basis-transform">(2.5)</a> extends as</p>
+<div class="math notranslate nohighlight">
+\[\beta^{\prime i}(x) = 
+    \gamma (x)^i_{\phantom{i}j} \beta^j(x).\]</div>
+<p>In the case of a frame <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x^i}\)</span>, the dual frame is written <span class="math notranslate nohighlight">\(\text{d}x^i\)</span>, which omits the argument <span class="math notranslate nohighlight">\(x\)</span>. We then find the analogue of eq. <a class="reference internal" href="vectors-tensors.html#equation-eq-bases-relation">(2.4)</a> as</p>
+<div class="math notranslate nohighlight">
+\[\text{d}x^i \left( \frac{\partial}{\partial x^j} \right) =  \delta^i_{\phantom{i}j},\]</div>
+<p>with <span class="math notranslate nohighlight">\(\delta^i_{\phantom{i}j}\)</span> being a constant function for all <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./diff-geo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="vectors-tensors.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.2. </span>Vectors and tensors</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="components.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.4. </span>Component expansions</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Fergus Baker<br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

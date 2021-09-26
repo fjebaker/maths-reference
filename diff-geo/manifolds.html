@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1. Manifolds &#8212; Mathematics Reference</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathematics.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mathematics.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.2. Vectors and tensors" href="vectors-tensors.html" />
+    <link rel="prev" title="2. Differential Geometry" href="outline.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics Reference</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../titlepage.html">
+   Mathematics Reference
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Differential Geometry
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../vectorspaces/outline.html">
+   1. Linear Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vectorspaces/linear-transformations.html">
+     1.1. Linear transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vectorspaces/vector-spaces.html">
+     1.2. Vector spaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="outline.html">
+   2. Differential Geometry
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.1. Manifolds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vectors-tensors.html">
+     2.2. Vectors and tensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="forms.html">
+     2.3. Forms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components.html">
+     2.4. Component expansions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../glossary/glossary.html">
+   3. Glossary
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/algebras.html">
+     3.1. Algebras
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/diff-geo/manifolds.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fjebaker/maths-reference"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fjebaker/maths-reference/issues/new?title=Issue%20on%20page%20%2Fdiff-geo/manifolds.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fjebaker/maths-reference/edit/master/diff-geo/manifolds.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charts">
+   2.1.1. Charts
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-on-manifolds">
+   2.1.2. Functions on manifolds
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="manifolds">
+<h1><span class="section-number">2.1. </span>Manifolds<a class="headerlink" href="#manifolds" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="charts">
+<h2><span class="section-number">2.1.1. </span>Charts<a class="headerlink" href="#charts" title="Permalink to this headline">¶</a></h2>
+<p>A manifold <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is a locally flat (Euclidean) open subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, which is covered by a collection (union) of open subsets <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>, sometimes referred to as neighbourhoods.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>A <em>homeomorphism</em> is a topology-preserving isomorphism.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Homeomorphism">Wikipedia: Homeomorphisms</a>.</p>
+</div>
+</div>
+<div class="admonition-definition-chart admonition">
+<p class="admonition-title">Definition: Chart</p>
+<p>A <em>chart</em> <span class="math notranslate nohighlight">\(\left( \mathscr{U}, \phi_\alpha \right)\)</span> on a manifold <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is defined by the open subset <span class="math notranslate nohighlight">\(\mathscr{U} \subset \mathcal{M}\)</span> and the associated homeomorphism</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi_\alpha : \mathscr{U} &amp;\rightarrow \mathbb{R}^n, \\
+x &amp;\mapsto \left( x^1, ..., x^n \right),\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x^i\)</span> are the coordinates of <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>.</p>
+</div>
+<p>For two intersecting charts, <span class="math notranslate nohighlight">\(\left( \mathscr{U}, \phi_\alpha \right)\)</span> and <span class="math notranslate nohighlight">\(\left( \mathscr{V}, \psi_\alpha \right)\)</span>, the composition</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi_\alpha \circ \psi_\alpha^{-1} : \mathbb{R}^n &amp;\rightarrow \mathbb{R}^n, \\
+\psi_\alpha (x) &amp; \mapsto \phi_\alpha (x)\end{split}\]</div>
+<p>takes points defined in the coordinates of <span class="math notranslate nohighlight">\(\mathscr{V}\)</span> to those of <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>, i.e. from <span class="math notranslate nohighlight">\(\left( \tilde{x}^1, ..., \tilde{x}^n \right) \mapsto \left(x^1, ..., x^n \right)\)</span>.</p>
+<p>In the case of points lying in an intersection of open subsets, <span class="math notranslate nohighlight">\(x \in \mathscr{U} \cap \mathscr{V}\)</span>, then, from the definition of the manifold, it is required that <span class="math notranslate nohighlight">\(x^i\)</span> are <em>smooth functions</em> of <span class="math notranslate nohighlight">\(\tilde{x}^i\)</span>.</p>
+<div class="admonition-definition-cartesian-product-of-manifolds admonition">
+<p class="admonition-title">Definition: Cartesian product of manifolds</p>
+<p>Two manifolds, <span class="math notranslate nohighlight">\(\mathcal{M} \subset \mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{N} \subset \mathbb{R}^k\)</span>, admit a <em>cartesian product</em> defined by the set of pairs of points</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{M} \times \mathcal{N} = \left\{ (x, y) \ : \ x \in \mathcal{M}, y \in \mathcal{N} \right\}.\]</div>
+</div>
+<p>As a corollary, if <span class="math notranslate nohighlight">\(\left( \mathscr{U}, \phi_\alpha \right)\)</span> and <span class="math notranslate nohighlight">\(\left( \mathscr{V}, \psi_\alpha \right)\)</span> are distinct charts of <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{N}\)</span> respectively, and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi_\alpha(x) &amp;= \left(x^1, ..., x^n \right), \\
+\psi_\alpha(y) &amp;= \left(y^1, ..., y^m \right),\end{split}\]</div>
+<p>then the map,</p>
+<div class="math notranslate nohighlight">
+\[\left( \phi_\alpha \times \psi_\alpha \right) (x, y) = \left( x^1, ..., x^n, y^1, ..., y^m \right),\]</div>
+<p>is sufficient to define <span class="math notranslate nohighlight">\(\mathcal{M} \times \mathcal{N}\)</span> as a manifold of <span class="math notranslate nohighlight">\(n+k\)</span> dimensions.</p>
+</div>
+<div class="section" id="functions-on-manifolds">
+<h2><span class="section-number">2.1.2. </span>Functions on manifolds<a class="headerlink" href="#functions-on-manifolds" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-definition-function-on-a-manifold admonition">
+<p class="admonition-title">Definition: Function on a manifold</p>
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> on an open subset <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> of a manifold <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is defined as a map</p>
+<div class="math notranslate nohighlight">
+\[f: \mathscr{U} \rightarrow \mathbb{R}.\]</div>
+</div>
+<p>Functions on manifolds may be composed with the homeomorphisms of charts as <span class="math notranslate nohighlight">\(f \circ \phi_\alpha^-1\)</span>, taking <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> into <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>; such compositions are smooth functions of the coordinates <span class="math notranslate nohighlight">\(x^i\)</span>.</p>
+<p>We are also permitted to express a smooth curve over an interval <span class="math notranslate nohighlight">\(Q : T \rightarrow \mathscr{U_\alpha}\)</span>, <span class="math notranslate nohighlight">\(T \subset \mathbb{R}\)</span>, parameterized by a real variable <span class="math notranslate nohighlight">\(\tau \in \left[ a, b \right]\)</span>:</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/test_0.svg"><img alt="../_images/test_0.svg" height="300px" src="../_images/test_0.svg" /></a>
+</div>
+<p>We write</p>
+<div class="math notranslate nohighlight">
+\[\left( \phi_\alpha \circ Q \right) (\tau) = \left( x^1(\tau), ..., x^n (\tau) \right),\]</div>
+<p>requiring <span class="math notranslate nohighlight">\(x^i(\tau)\)</span> to be smooth functions of <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>We may also consider the composition <span class="math notranslate nohighlight">\(f \circ Q\)</span>, along with <span class="math notranslate nohighlight">\(\phi_\alpha \circ Q\)</span>, to describe the action of the function on <span class="math notranslate nohighlight">\(\tau\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left( f \circ Q \right)(t) =&amp; f(Q(t)) \\
+=&amp; f\left( x^1(\tau), ..., x^n (\tau) \right)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p\)</span> is the point imaged by <span class="math notranslate nohighlight">\(Q(\tau)\)</span> in the open subset <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./diff-geo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="outline.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2. </span>Differential Geometry</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="vectors-tensors.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.2. </span>Vectors and tensors</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Fergus Baker<br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

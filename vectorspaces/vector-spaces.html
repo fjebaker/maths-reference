@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2. Vector spaces &#8212; Mathematics Reference</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathematics.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mathematics.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Differential Geometry" href="../diff-geo/outline.html" />
+    <link rel="prev" title="1.1. Linear transformations" href="linear-transformations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics Reference</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../titlepage.html">
+   Mathematics Reference
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Differential Geometry
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="outline.html">
+   1. Linear Algebra
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="linear-transformations.html">
+     1.1. Linear transformations
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2. Vector spaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../diff-geo/outline.html">
+   2. Differential Geometry
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diff-geo/manifolds.html">
+     2.1. Manifolds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diff-geo/vectors-tensors.html">
+     2.2. Vectors and tensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diff-geo/forms.html">
+     2.3. Forms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../diff-geo/components.html">
+     2.4. Component expansions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../glossary/glossary.html">
+   3. Glossary
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/algebras.html">
+     3.1. Algebras
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/vectorspaces/vector-spaces.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fjebaker/maths-reference"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fjebaker/maths-reference/issues/new?title=Issue%20on%20page%20%2Fvectorspaces/vector-spaces.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fjebaker/maths-reference/edit/master/vectorspaces/vector-spaces.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subspace">
+   1.2.1. Subspace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#direct-sum">
+   1.2.2. Direct sum
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bases-under-direct-sum">
+     1.2.2.1. Bases under direct sum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dual-space">
+   1.2.3. Dual space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annihilator">
+   1.2.4. Annihilator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dual-transformation">
+   1.2.5. Dual transformation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#projections">
+   1.2.6. Projections
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vector-spaces">
+<h1><span class="section-number">1.2. </span>Vector spaces<a class="headerlink" href="#vector-spaces" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subspace">
+<h2><span class="section-number">1.2.1. </span>Subspace<a class="headerlink" href="#subspace" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="direct-sum">
+<h2><span class="section-number">1.2.2. </span>Direct sum<a class="headerlink" href="#direct-sum" title="Permalink to this headline">¶</a></h2>
+<p>Consider vector spaces <span class="math notranslate nohighlight">\(U, V \subset W\)</span>. We say <span class="math notranslate nohighlight">\(W\)</span> is the <em>direct sum</em> of <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(W\)</span></p>
+<div class="math notranslate nohighlight">
+\[W = V \oplus U,\]</div>
+<p>if <span class="math notranslate nohighlight">\(W = V + U\)</span>, and <span class="math notranslate nohighlight">\(\{ 0 \} = V \cap U\)</span>.</p>
+<div class="lemma admonition">
+<p class="admonition-title">Lemma</p>
+<p>Let <span class="math notranslate nohighlight">\(U, V\)</span> be subspaces of a vector space <span class="math notranslate nohighlight">\(W\)</span>, then <span class="math notranslate nohighlight">\(W = V \oplus U\)</span> <em>if and only if</em> for every <span class="math notranslate nohighlight">\(w \in W\)</span> there exist unique vectors <span class="math notranslate nohighlight">\(v \in V\)</span> and <span class="math notranslate nohighlight">\(u \in U\)</span> such that <span class="math notranslate nohighlight">\(w = v + u\)</span>.</p>
+</div>
+<p>We can sketch a visual proof for this Lemma: consider <span class="math notranslate nohighlight">\(W = \mathbb{R}^2\)</span>, with the only non-trivial subspaces represented by lines passing through the origin, and let <span class="math notranslate nohighlight">\(V\)</span> be the vectors lying exclusively along the <span class="math notranslate nohighlight">\(x\)</span>-axis plus the zero vector, and <span class="math notranslate nohighlight">\(U\)</span> be the vectors lying along the <span class="math notranslate nohighlight">\(y\)</span>-axis plus the zero vector.</p>
+<div class="section" id="bases-under-direct-sum">
+<h3><span class="section-number">1.2.2.1. </span>Bases under direct sum<a class="headerlink" href="#bases-under-direct-sum" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(b_i\)</span> and <span class="math notranslate nohighlight">\(k_j\)</span> denote the bases of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(U\)</span> respectively. Under a direct sum, the basis of <span class="math notranslate nohighlight">\(W\)</span> is given by the union <span class="math notranslate nohighlight">\(b_i \cup k_j\)</span>.</p>
+<p>We may also state that <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(U\)</span> are orthogonal, i.e. <span class="math notranslate nohighlight">\(V \perp U\)</span>. Following from the above lemma, for every <span class="math notranslate nohighlight">\(w \in W\)</span>, we can write the decomposition</p>
+<div class="math notranslate nohighlight">
+\[w = \sum_{i=1}^{\text{dim}\ V} v^i b_i + \sum_{j=1}^{\text{dim}\ U} u^j k_j.\]</div>
+</div>
+</div>
+<div class="section" id="dual-space">
+<h2><span class="section-number">1.2.3. </span>Dual space<a class="headerlink" href="#dual-space" title="Permalink to this headline">¶</a></h2>
+<p>The dual space of a vector space <span class="math notranslate nohighlight">\(V\)</span> is denoted <span class="math notranslate nohighlight">\(V^\ast\)</span>, and is defined as the space of all linear functions mapping <span class="math notranslate nohighlight">\(V\)</span> into the reals.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The dual space is important in the language of <a class="reference internal" href="../diff-geo/forms.html"><span class="doc">Forms</span></a>.</p>
+</div>
+</div>
+<div class="admonition-definition-dual-vector-space admonition">
+<p class="admonition-title">Definition: Dual vector space</p>
+<p>Given a vector space <span class="math notranslate nohighlight">\(V\)</span>, its dual is defined</p>
+<div class="math notranslate nohighlight">
+\[V^\ast := \{ \phi : V \rightarrow \mathbb{R}, \ \text{linear} \}.\]</div>
+</div>
+<p>Denoting the bases of <span class="math notranslate nohighlight">\(V\)</span> with <span class="math notranslate nohighlight">\(b_i\)</span>, then the basis of <span class="math notranslate nohighlight">\(V^\ast\)</span> is <span class="math notranslate nohighlight">\(\beta^i\)</span> defined by</p>
+<div class="math notranslate nohighlight" id="equation-eq-basis">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-basis" title="Permalink to this equation">¶</a></span>\[\beta^i (b_j) := \delta^i_{\hphantom{i}j}.\]</div>
+<p>We express the basis transformation for the vector space through the action of an <span class="math notranslate nohighlight">\(n \times n\)</span> invertible matrix <span class="math notranslate nohighlight">\(\gamma\)</span></p>
+<div class="math notranslate nohighlight">
+\[b'_i := \sum_{j=1}^n (\gamma^{-1})^j_{\hphantom{j}i} b_j,\]</div>
+<p>where <span class="math notranslate nohighlight">\(n = \text{dim} \ V\)</span>, and <span class="math notranslate nohighlight">\((\gamma^{-1})^j_{\hphantom{j}i} \in \mathbb{R}\)</span>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><span class="math notranslate nohighlight">\(\gamma\)</span> is a <em>passive transformation</em>, as it acts to alter the basis we are using to express our vector.</p>
+</div>
+<p>The basis transformation on the dual basis is given by the inverse transpose of <span class="math notranslate nohighlight">\(\gamma\)</span></p>
+<div class="math notranslate nohighlight">
+\[\beta'^i := \sum_{j=1}^n \gamma^i_{\hphantom{i}j} \beta^j. \]</div>
+</div>
+<div class="section" id="annihilator">
+<h2><span class="section-number">1.2.4. </span>Annihilator<a class="headerlink" href="#annihilator" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-definition-annihilator-of-a-vector-space admonition">
+<p class="admonition-title">Definition: Annihilator of a vector space</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a subet of a vector space <span class="math notranslate nohighlight">\(V\)</span>. The <em>annihilator</em> of <span class="math notranslate nohighlight">\(U\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[U^0 := \{ \phi : V \rightarrow \mathbb{R} \ | \ \phi(u) = 0 \ \forall \ u \in U \}.\]</div>
+</div>
+<p>As such, <span class="math notranslate nohighlight">\(V^0 \subset V^\ast\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(b_i\)</span> form a basis of <span class="math notranslate nohighlight">\(V\)</span> for <span class="math notranslate nohighlight">\(i = 1, ..., n\)</span> where <span class="math notranslate nohighlight">\(n = \text{dim} \, V\)</span>, and suppose the basis of <span class="math notranslate nohighlight">\(U\)</span> consists of <span class="math notranslate nohighlight">\(b_i\)</span> for <span class="math notranslate nohighlight">\(i = 1, ..., m &lt; n\)</span>, with <span class="math notranslate nohighlight">\(m = \text{dim} \, U\)</span>. We may then consider the dual basis <span class="math notranslate nohighlight">\(\beta_i\)</span> for <span class="math notranslate nohighlight">\(V^\ast\)</span>, such that</p>
+<div class="math notranslate nohighlight">
+\[\{ \beta_{m+1}, ..., \beta_{n} \} \subseteq U^0,\]</div>
+<p>forms a basis for <span class="math notranslate nohighlight">\(U^0\)</span>.</p>
+<p><em>NB:</em> from eq. <a class="reference internal" href="#equation-eq-basis">(1.1)</a>, any element of <span class="math notranslate nohighlight">\(\{ \beta_{m+1}, ..., \beta_{n} \}\)</span> acting on any basis element of <span class="math notranslate nohighlight">\(U\)</span> is <span class="math notranslate nohighlight">\(0\)</span>, asserting that <span class="math notranslate nohighlight">\(U^0\)</span> is indeed the annihiliator.</p>
+<p>It follows that</p>
+<div class="math notranslate nohighlight" id="equation-eq-adim">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-adim" title="Permalink to this equation">¶</a></span>\[\text{dim} \, V = \text{dim} \, U + \text{dim} \, U^0.\]</div>
+</div>
+<div class="section" id="dual-transformation">
+<h2><span class="section-number">1.2.5. </span>Dual transformation<a class="headerlink" href="#dual-transformation" title="Permalink to this headline">¶</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(T\)</span> be a linear transformation between vector spaces <span class="math notranslate nohighlight">\(V \rightarrow W\)</span>. The dual transformation is then <span class="math notranslate nohighlight">\(T^\ast : W^\ast \rightarrow V^\ast\)</span> .</p>
+<div class="admonition-definition-dual-transformation admonition">
+<p class="admonition-title">Definition: Dual transformation</p>
+<p>For some <span class="math notranslate nohighlight">\(T: V \rightarrow W\)</span> the dual transformation <span class="math notranslate nohighlight">\(T^\ast : W^\ast \rightarrow V^\ast\)</span> is defined by</p>
+<div class="math notranslate nohighlight" id="equation-eq-dualtrans">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-eq-dualtrans" title="Permalink to this equation">¶</a></span>\[T^\ast \omega := \omega \circ T, \ \ \forall \ \omega \in W^\ast.\]</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Notation</p>
+<p>This is sometimes written with parentheses</p>
+<div class="math notranslate nohighlight">
+\[(T^\ast \omega , v)\, = (\omega ,  T v ).\]</div>
+</div>
+<p>The operation of <span class="math notranslate nohighlight">\(T^\ast\)</span> is commonly termed the <em>adjoint</em>. For all <span class="math notranslate nohighlight">\(v \in V\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[(T^\ast \omega)\, v = \omega \, ( T v ).\]</div>
+<div class="theorem admonition">
+<p class="admonition-title">Theorem: Matrix of dual transformation</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be vector spaces with bases defined. Let <span class="math notranslate nohighlight">\(A\)</span> denote the matrix of <span class="math notranslate nohighlight">\(T: V \rightarrow W\)</span>, and <span class="math notranslate nohighlight">\(B\)</span> be the matrix of the dual transformation <span class="math notranslate nohighlight">\(T^\ast: W^\ast \rightarrow V^\ast\)</span>. Then <span class="math notranslate nohighlight">\(B = A^\text{T}\)</span>.</p>
+<div class="toggle docutils container">
+<p><strong>Proof</strong>:
+Starting from the definition of <span class="math notranslate nohighlight">\(T^\ast \omega\)</span> for any <span class="math notranslate nohighlight">\(\omega \in W^\ast\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+(T^\ast \omega) v = \omega (T v), \ \ \forall \ v \in V.
+\]</div>
+<p>Substituting the matrix representations, and properly denoting the transpose</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(B \omega)^\text{T} v = &amp; \ \omega^\text{T} (A v), \\
+\omega^\text{T} B^\text{T} v = &amp; \ \omega^\text{T} A v.\end{split}\]</div>
+<p>Since this is true for all <span class="math notranslate nohighlight">\(\omega \in W^\ast\)</span> and <span class="math notranslate nohighlight">\(v \in V\)</span>, the above is equivalent to <span class="math notranslate nohighlight">\(B^\text{T} = A\)</span>, or vice versa. <span class="math notranslate nohighlight">\(\square\)</span></p>
+</div>
+</div>
+<p>A direct corollary of this theorem is that</p>
+<div class="math notranslate nohighlight">
+\[\text{rank}\, T^\ast = \text{rank}\, T.\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>More information in <a class="reference internal" href="linear-transformations.html#sec-kernim"><span class="std std-ref">Kernel and image</span></a>.</p>
+</div>
+</div>
+<div class="theorem admonition">
+<p class="admonition-title">Theorem: Annihilator of kernel and image</p>
+<p>If <span class="math notranslate nohighlight">\(T: V \rightarrow W\)</span>, and <span class="math notranslate nohighlight">\(T^\ast\)</span> is its dual transformation, then</p>
+<div class="math notranslate nohighlight">
+\[\text{ker}\, T^\ast = (\text{im}\, T)^0, \ \ \ \ \ \ \text{im}\, T^\ast = (\text{ker}\, T)^0.\]</div>
+<div class="toggle docutils container">
+<p><strong>Proof</strong>:
+First, consider some <span class="math notranslate nohighlight">\(\phi \in \text{im}\, T^\ast\)</span>, and <span class="math notranslate nohighlight">\(v \in \text{ker} \, T\)</span> – then</p>
+<div class="math notranslate nohighlight">
+\[\phi (v) = T^\ast(\omega) (v),\]</div>
+<p>for some <span class="math notranslate nohighlight">\(\omega \in W^\ast\)</span>. It follows from eq. <a class="reference internal" href="#equation-eq-dualtrans">(1.3)</a> that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; = w \, T(v), \\
+&amp; = 0,\end{split}\]</div>
+<p>as <span class="math notranslate nohighlight">\(v\)</span> belongs to the kernel of <span class="math notranslate nohighlight">\(T\)</span>. Therefore <span class="math notranslate nohighlight">\(\phi \in (\text{ker} \, T)^0\)</span> which implies <span class="math notranslate nohighlight">\(\text{im} \, T^\ast \subseteq (\text{ker} \, T)^0\)</span>.</p>
+<p>Second, to prove <span class="math notranslate nohighlight">\(\text{im} \, T^\ast = (\text{ker} \, T)^0\)</span>, we may consider dimensions: using the corollary of the last theorem,</p>
+<div class="math notranslate nohighlight">
+\[\text{dim} \, \text{im} \, T^\ast = \text{dim} \, \text{im} \, T.\]</div>
+<p>Using eq. <a class="reference internal" href="#equation-eq-adim">(1.2)</a>, we may write</p>
+<div class="math notranslate nohighlight">
+\[\text{dim} \, (\text{ker} \, T)^0 = \text{dim} \, V - \text{dim} \, \text{ker} \, T,\]</div>
+<p>since <span class="math notranslate nohighlight">\(\text{ker} \, T \subset V\)</span>. From rank-nullity (see <a class="reference internal" href="linear-transformations.html#sec-ranknull"><span class="std std-ref">Rank and nullity</span></a>) theorem</p>
+<div class="math notranslate nohighlight">
+\[\text{dim} \, V = \text{dim} \, \text{im} \, T  + \text{dim} \, \text{ker} \, T,\]</div>
+<p>and so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\text{dim} \, (\text{ker} \, T)^0 = &amp; \, \text{dim} \, \text{im} \, T, \\
+ = &amp; \, \text{dim} \, \text{im} \, T^\ast. \\\end{split}\]</div>
+<p>As both have the same dimension, they must be equal. The exact same line of thinking follows for the other equation. <span class="math notranslate nohighlight">\(\square\)</span></p>
+</div>
+</div>
+<p>To rephrase the above theorem, we can say that the subset of <span class="math notranslate nohighlight">\(W^\ast\)</span> that is mapped to <span class="math notranslate nohighlight">\(0\)</span> by <span class="math notranslate nohighlight">\(T^\ast\)</span> is the same subset of <span class="math notranslate nohighlight">\(W^\ast\)</span> that would map vectors in the image of <span class="math notranslate nohighlight">\(T\)</span> to <span class="math notranslate nohighlight">\(0\)</span>. Likewise, the subset of <span class="math notranslate nohighlight">\(V^\ast\)</span> covered by the image of <span class="math notranslate nohighlight">\(T^\ast\)</span> take vectors in <span class="math notranslate nohighlight">\(V\)</span>, that are mapped to <span class="math notranslate nohighlight">\(0\)</span> by <span class="math notranslate nohighlight">\(T\)</span>, also to <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div>
+<div class="section" id="projections">
+<h2><span class="section-number">1.2.6. </span>Projections<a class="headerlink" href="#projections" title="Permalink to this headline">¶</a></h2>
+<p>Consider <span class="math notranslate nohighlight">\(W = V \oplus U\)</span>; we construct an operator <span class="math notranslate nohighlight">\(P: W \rightarrow V\)</span>, element wise <span class="math notranslate nohighlight">\(w \mapsto P(w)\)</span>. For some <span class="math notranslate nohighlight">\(w = v + u\)</span>, with <span class="math notranslate nohighlight">\(v \in V\)</span>, <span class="math notranslate nohighlight">\(u \in U\)</span>, we then define <span class="math notranslate nohighlight">\(P(w) := u\)</span>.</p>
+<p>That is to say <span class="math notranslate nohighlight">\(P\)</span> is a linear transformation, with <span class="math notranslate nohighlight">\(\text{im}\, P = V\)</span>, <span class="math notranslate nohighlight">\(\text{ker}\, P = U\)</span>, and <span class="math notranslate nohighlight">\(P^2 = P\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(P\)</span> is called the <em>projection</em> of <span class="math notranslate nohighlight">\(W\)</span> onto <span class="math notranslate nohighlight">\(V\)</span> along <span class="math notranslate nohighlight">\(U\)</span>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./vectorspaces"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="linear-transformations.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">1.1. </span>Linear transformations</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../diff-geo/outline.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2. </span>Differential Geometry</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Fergus Baker<br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

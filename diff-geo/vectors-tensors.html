@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.2. Vectors and tensors &#8212; Mathematics Reference</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mathematics.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mathematics.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.3. Forms" href="forms.html" />
+    <link rel="prev" title="2.1. Manifolds" href="manifolds.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematics Reference</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../titlepage.html">
+   Mathematics Reference
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Differential Geometry
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../vectorspaces/outline.html">
+   1. Linear Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vectorspaces/linear-transformations.html">
+     1.1. Linear transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../vectorspaces/vector-spaces.html">
+     1.2. Vector spaces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="outline.html">
+   2. Differential Geometry
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="manifolds.html">
+     2.1. Manifolds
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.2. Vectors and tensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="forms.html">
+     2.3. Forms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="components.html">
+     2.4. Component expansions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../glossary/glossary.html">
+   3. Glossary
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../glossary/algebras.html">
+     3.1. Algebras
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/diff-geo/vectors-tensors.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/fjebaker/maths-reference"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/fjebaker/maths-reference/issues/new?title=Issue%20on%20page%20%2Fdiff-geo/vectors-tensors.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/fjebaker/maths-reference/edit/master/diff-geo/vectors-tensors.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tangent-spaces-and-tangent-vectors">
+   2.2.1. Tangent spaces and tangent vectors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tangent-mapping">
+   2.2.2. Tangent mapping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frames">
+   2.2.3. Frames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting-tangent-spaces-with-contra-and-covariant-vectors">
+   2.2.4. Connecting tangent spaces with contra- and covariant vectors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tensors">
+   2.2.5. Tensors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tensor-symmetry">
+     2.2.5.1. Tensor symmetry
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vectors-and-tensors">
+<h1><span class="section-number">2.2. </span>Vectors and tensors<a class="headerlink" href="#vectors-and-tensors" title="Permalink to this headline">¶</a></h1>
+<p>To introduce the concept of vectors and tensors, it is worth considering how a derivative is defined on a manifold.</p>
+<p>Given an open subset <span class="math notranslate nohighlight">\(\mathscr{U} \subset \mathcal{M}\)</span>, a function <span class="math notranslate nohighlight">\(f: \mathscr{U} \rightarrow \mathbb{R}\)</span> and the curve given by <span class="math notranslate nohighlight">\(Q: T \rightarrow \mathscr{U}\)</span>, <span class="math notranslate nohighlight">\(T \subset \mathbb{R}\)</span> , along with the composition <span class="math notranslate nohighlight">\(f \circ Q\)</span>, we may examine the derivative of <span class="math notranslate nohighlight">\(f\)</span> a the point, imaged by <span class="math notranslate nohighlight">\(Q(\tau=\tau_0)\)</span>, in <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> by considering</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left. \left( \frac{\partial f}{\partial \tau} \right)_{Q(\tau)}  \right\rvert_{\tau=\tau_0} =&amp; \lim_{\epsilon \rightarrow 0} \Big( \frac{f\left( Q(\tau_0 + \epsilon) \right) - f \left( Q(\tau_0) \right)}{\epsilon} \Big), \\
+=&amp; \left. \sum_{i=0}^{n} \frac{\text{d}x^i(\tau)}{\text{d}\tau} \right\rvert_{\tau_0} \left( \frac{\partial f}{\partial x^i} \right)_{Q(t)},\end{split}\]</div>
+<p>with the <span class="math notranslate nohighlight">\(x^i\)</span> being the coordinates of the chart <span class="math notranslate nohighlight">\((\mathscr{U}, \phi_\alpha)\)</span>. By adopting the summation convention, this may be written compactly as</p>
+<div class="math notranslate nohighlight">
+\[= \left. \left( \frac{\text{d}x^i}{\text{d}\tau} \frac{\partial f}{\partial x^i} \right) \right\rvert_{\tau_0}.\]</div>
+<div class="section" id="tangent-spaces-and-tangent-vectors">
+<h2><span class="section-number">2.2.1. </span>Tangent spaces and tangent vectors<a class="headerlink" href="#tangent-spaces-and-tangent-vectors" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-definition-tangent-space admonition">
+<p class="admonition-title">Definition: Tangent space</p>
+<p>The <em>tangent space</em> is an <span class="math notranslate nohighlight">\(n\)</span> dimensions vector space defined at a point <span class="math notranslate nohighlight">\(x \in \mathscr{U}\)</span>, where <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> is an open subset of <span class="math notranslate nohighlight">\(n\)</span>-dimensional manifold <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, by the set</p>
+<div class="math notranslate nohighlight" id="equation-def-tangent-space">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-def-tangent-space" title="Permalink to this equation">¶</a></span>\[\begin{split}T_x \mathscr{U} :=&amp; \ \left\{ x \right\} \times \mathbb{R}^n, \\
+=&amp; \ \Big\{ (x, \xi) \ | \ \xi \in \mathbb{R}^n \Big\}.\end{split}\]</div>
+</div>
+<p>The tangent space has linear structure</p>
+<div class="math notranslate nohighlight">
+\[a\left( x, \xi \right) + b\left( x, \eta \right) = \left( x, a \xi + b \eta \right),\]</div>
+<p>for <span class="math notranslate nohighlight">\(a,b \in \mathbb{R}\)</span>. These tangent spaces are bound to their point of definition in <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>, and elements of <span class="math notranslate nohighlight">\(T_x \mathscr{U}\)</span> and <span class="math notranslate nohighlight">\(T_y \mathscr{U}\)</span>, <span class="math notranslate nohighlight">\(x \neq y\)</span> live in entirely separate spaces.</p>
+<p>By considering various curves <span class="math notranslate nohighlight">\(Q: T \rightarrow \mathscr{U}\)</span>, <span class="math notranslate nohighlight">\(T \subset \mathbb{R}\)</span>, passing through <span class="math notranslate nohighlight">\(x \in \mathscr{U}\)</span> we may examine tangents to the curve <span class="math notranslate nohighlight">\(Q\)</span> at <span class="math notranslate nohighlight">\(x\)</span>: each point along a curve <span class="math notranslate nohighlight">\(Q(\tau)\)</span> defines a <em>velocity vector</em> <span class="math notranslate nohighlight">\(\frac{\text{d}Q}{\text{d}\tau} \in \mathbb{R}^n\)</span>, which measures how the point <span class="math notranslate nohighlight">\(Q(\tau)\)</span> changes tangentially with respect to each coordinate of <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> as <span class="math notranslate nohighlight">\(\tau\)</span> changes. It is a velocity in the sense of being a first derivative.</p>
+<div class="admonition-definition-tangent-vector admonition">
+<p class="admonition-title">Definition: Tangent vector</p>
+<p>A <em>tangent vector</em> is a vector tangent to a point <span class="math notranslate nohighlight">\(Q(\tau) \in \mathscr{U}\)</span> along the curve <span class="math notranslate nohighlight">\(Q\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-def-tangent-vector">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-def-tangent-vector" title="Permalink to this equation">¶</a></span>\[\begin{split}\dot{Q}(\tau) &amp;:= \left( Q(\tau), \frac{\text{d}Q}{\text{d}\tau} \right) \in T_{Q(\tau)} \mathscr{U} \\
+&amp;= \frac{\text{d}Q^i}{\text{d} \tau} \left. b_i \right\rvert_{Q(\tau)},\end{split}\]</div>
+<p>for <span class="math notranslate nohighlight">\(i = 1, ..., n\)</span>, where <span class="math notranslate nohighlight">\(\frac{\text{d}Q}{\text{d} \tau} \in \mathbb{R}^n\)</span>, and <span class="math notranslate nohighlight">\( \left. b_i \right\rvert_{Q(\tau)} \)</span> forms a basis spanning <span class="math notranslate nohighlight">\(T_x \mathscr{U}\)</span>.</p>
+</div>
+<p>We will further explore <span class="math notranslate nohighlight">\(\left. b_i \right\rvert_{Q(\tau)}\)</span> when we discuss frames in the next section, which will connect <span class="math notranslate nohighlight">\(\left. b_i \right\rvert_{Q(\tau)}\)</span> with the <span class="math notranslate nohighlight">\((x, \xi)\)</span> of the tangent space definition eq. <a class="reference internal" href="#equation-def-tangent-space">(2.1)</a>.</p>
+<p>This definition admits a local parameterization of the curves <span class="math notranslate nohighlight">\(Q\)</span> by considering</p>
+<div class="math notranslate nohighlight">
+\[x^i \left( x + Q(\tau) \right) = x^i(x) + \frac{\text{d}Q^i}{\text{d} \tau} \tau,\]</div>
+<p>over a small interval <span class="math notranslate nohighlight">\(-\varepsilon &lt; \tau &lt; \varepsilon\)</span> .</p>
+<p>We define a smooth mapping <span class="math notranslate nohighlight">\(v_\alpha\)</span>, called a <em>vector field</em>, as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_\alpha : \mathscr{U} &amp; \rightarrow T_x \mathscr{U}, \\
+x &amp; \mapsto (x, \xi(x)) = v(x).\end{split}\]</div>
+<p>By considering a curve <span class="math notranslate nohighlight">\(Q: T \rightarrow \mathscr{U}\)</span>, <span class="math notranslate nohighlight">\(T \subset \mathbb{R}^p\)</span>, such that <span class="math notranslate nohighlight">\(\tau\)</span> now has <span class="math notranslate nohighlight">\(p\)</span> components, we have a <span class="math notranslate nohighlight">\(n \times p\)</span> matrix representation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left( \frac{\partial Q^i}{\partial \tau^j} \right)_{\substack{i = 1, \dots, n \\ j = 1, \dots, p}},\end{split}\]</div>
+<p>with rank <span class="math notranslate nohighlight">\(p\)</span> everywhere on <span class="math notranslate nohighlight">\(T\)</span>. The tangent space at <span class="math notranslate nohighlight">\(Q(\tau)\)</span> are <span class="math notranslate nohighlight">\(p\)</span> linearly independent vector fields on <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>, spanning <span class="math notranslate nohighlight">\(T_{Q(\tau)} \mathscr{U}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[Q(\tau) \mapsto \left( Q(\tau), \frac{\partial Q}{\partial \tau^j} \right).\]</div>
+<p>Such a set of vector fields may be decomposed onto a <em>frame</em>, which we will now take a moment to define.</p>
+</div>
+<div class="section" id="tangent-mapping">
+<h2><span class="section-number">2.2.2. </span>Tangent mapping<a class="headerlink" href="#tangent-mapping" title="Permalink to this headline">¶</a></h2>
+<p>Maps between open subsets have an analog in the tangent space.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="notation admonition">
+<p class="admonition-title">Notation</p>
+<p>The tangent map <span class="math notranslate nohighlight">\(T_x F\)</span> is also sometimes denotes <span class="math notranslate nohighlight">\(F_\ast\)</span>.</p>
+</div>
+</div>
+<div class="admonition-definition-tangent-mapping admonition">
+<p class="admonition-title">Definition: Tangent mapping</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> and <span class="math notranslate nohighlight">\(\mathscr{V}\)</span> be open subsets of <span class="math notranslate nohighlight">\(\mathcal{M} \subset \mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{K} \subset \mathbb{R}^m\)</span> respectively, and let <span class="math notranslate nohighlight">\(F\)</span> be a map <span class="math notranslate nohighlight">\(F : \mathscr{U} \rightarrow \mathscr{V}\)</span>, then the <em>tangent mapping</em> is defined</p>
+<div class="math notranslate nohighlight">
+\[T_x F: T_x \mathscr{U} \rightarrow T_{F(x)} \mathscr{U}.\]</div>
+</div>
+<p>Consider again the curve <span class="math notranslate nohighlight">\(Q : T \rightarrow \mathscr{U}\)</span>, with <span class="math notranslate nohighlight">\(T \subset \mathbb{R}\)</span>, then we also have the composition <span class="math notranslate nohighlight">\(F \circ Q : T \rightarrow \mathscr{V}\)</span>. Let <span class="math notranslate nohighlight">\(x^i\)</span> and <span class="math notranslate nohighlight">\(y^j\)</span> be the coordinates of <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> and <span class="math notranslate nohighlight">\(\mathscr{V}\)</span>, then, given the tangent vector in eq. <a class="reference internal" href="#equation-eq-def-tangent-vector">(2.2)</a>, we may write</p>
+<div class="math notranslate nohighlight">
+\[\left(
+    Q(\tau), \frac{\text{d}Q}{\text{d}\tau}    
+\right) 
+    = \frac{\text{d}Q^i}{\text{d}\tau} \left. \frac{\partial}{\partial x^i} \right\rvert_{Q(\tau)},\]</div>
+<p>which is an element of <span class="math notranslate nohighlight">\(T_{Q{\tau}} \mathscr{U}\)</span>. The composition <span class="math notranslate nohighlight">\(F \circ Q\)</span> is then decomposed</p>
+<div class="math notranslate nohighlight">
+\[\left(
+    \left( F \circ Q \right)(\tau), \frac{\text{d}}{\text{d}\tau} \left( F \circ Q \right)   
+\right) 
+    = 
+    \frac{\text{d}}{\text{d}\tau} 
+    \left( F \circ Q \right)^j 
+    \left. \frac{\partial}{\partial y^j} \right\rvert_{F(Q(\tau))},\]</div>
+<p>now an element of <span class="math notranslate nohighlight">\(T_{F(Q(\tau))} \mathscr{V}\)</span> . The tangent map <span class="math notranslate nohighlight">\(T_{Q(\tau)}F\)</span> must then map between these two spaces; for some vector <span class="math notranslate nohighlight">\(\dot{u} \in T_x \mathscr{U}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\dot{u} = 
+    \dot{u}^i 
+    \frac{\partial}{\partial x^i},\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[\left( T_x F \right) \dot{u} = 
+    \sum_j^m \left( 
+        \sum_i^n \dot{u}^i \frac{\partial}{\partial x^i} F^j
+    \right)
+    \left. \frac{\partial}{\partial y^j} \right\rvert_{F(x)},\]</div>
+<p>is the action of the tangent mapping, as by the chain rule we know</p>
+<div class="math notranslate nohighlight">
+\[\frac{\text{d}}{\text{d} \tau} \left(
+    F \circ Q
+\right)^j
+    =
+    \left.
+        \frac{\partial F^j}{\partial x^i}
+    \right\rvert_{Q(\tau)} \frac{\text{d}Q^i}{\text{d} \tau}.\]</div>
+</div>
+<div class="section" id="frames">
+<span id="sec-frames"></span><h2><span class="section-number">2.2.3. </span>Frames<a class="headerlink" href="#frames" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="notation admonition">
+<p class="admonition-title">Notation</p>
+<p>Other names for an <span class="math notranslate nohighlight">\(n\)</span>-frame are <em>vielbein</em>, co-moving frame, or, for <span class="math notranslate nohighlight">\(n=4\)</span>, <em>tetrad</em>.</p>
+<p>The use of partial derivatives as the symbols of the frame also anticipates the tangents vectors as derivations on <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>.</p>
+</div>
+</div>
+<div class="admonition-definition-frame admonition">
+<p class="admonition-title">Definition: Frame</p>
+<p>An <span class="math notranslate nohighlight">\(n\)</span>-frame is the set of linearly-independent vector fields <span class="math notranslate nohighlight">\(b_i\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}b_i : \mathscr{U} &amp;\rightarrow  T_{x}\mathscr{U}, \\
+x &amp; \mapsto b_i(x),\end{split}\]</div>
+<p>where the <span class="math notranslate nohighlight">\(b_i(x)\)</span> form a basis of the co-domain, and <span class="math notranslate nohighlight">\(i = 1, ..., n\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(x^i\)</span> are identified as the coordinates of <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>, then the frame is denoted</p>
+<div class="math notranslate nohighlight">
+\[\left\{ \frac{\partial}{\partial x^i} \right\},\]</div>
+<p>which act on points <span class="math notranslate nohighlight">\(x \in \mathscr{U}\)</span> to obtain tangent vectors</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial}{\partial x^i} (x) := \left( x, \frac{\partial x}{\partial x^i} \right) \in T_{x}\mathscr{U}.\]</div>
+</div>
+<p>The transformation between frames <span class="math notranslate nohighlight">\(b_i\)</span> and <span class="math notranslate nohighlight">\(b^\prime_i\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-eq-basis-transform">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-basis-transform" title="Permalink to this equation">¶</a></span>\[b^\prime_j(x) = \left( \gamma^{-1}(x) \right)^i_{\phantom{i}j} \ b_i(x),\]</div>
+<p>with <span class="math notranslate nohighlight">\(\gamma(x) \in \text{GL}_n\)</span>. Note that <span class="math notranslate nohighlight">\(\gamma\)</span> is a gauge-group-valued function on <span class="math notranslate nohighlight">\(\mathscr{U}\)</span>. The transformation between frames associated with coordinates <span class="math notranslate nohighlight">\(x^i\)</span> and <span class="math notranslate nohighlight">\(y^i\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\left. \frac{\partial}{\partial y^j} \right\rvert_x = \frac{\partial x^i}{\partial y^j} \left. \frac{\partial}{\partial x^i} \right\rvert_x,\]</div>
+<p>identifying <span class="math notranslate nohighlight">\(\left( \gamma^{-1}(x) \right)^i_{\phantom{i}j} = \frac{\partial x^i}{\partial y^j}\)</span>.</p>
+<p>Any set of coordinates <span class="math notranslate nohighlight">\(x^i\)</span> on <span class="math notranslate nohighlight">\(\mathscr{U}\)</span> determines an <span class="math notranslate nohighlight">\(n\)</span>-frame, but there are generally no coordinates determining a frame coinciding with a given one.</p>
+<p>Each of the <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x^i}\)</span> is tangential to the coordinate line of <span class="math notranslate nohighlight">\(x^i\)</span>. For the case of Cartesian coordinates <span class="math notranslate nohighlight">\(x^i\)</span>, we can express the n-frame</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{\partial}{\partial x^1} (x) &amp;= (x, (1, 0, ..., 0)), \\
+\frac{\partial}{\partial x^2} (x) &amp;= (x, (0, 1, ..., 0)), \\ 
+\vdots &amp; \\
+\frac{\partial}{\partial x^n} (x) &amp;= (x, (0, 0, ..., 1)).\end{split}\]</div>
+<p>Every vector field <span class="math notranslate nohighlight">\(v\)</span> may be decomposed in terms of a frame <span class="math notranslate nohighlight">\(b_i\)</span></p>
+<div class="math notranslate nohighlight">
+\[v(x) = v^i(x) b_i(x),\]</div>
+<p>where <span class="math notranslate nohighlight">\(v^i\)</span> are smooth functions to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. For the tangent vector to a curve <span class="math notranslate nohighlight">\(Q(\tau)\)</span> with coordinates <span class="math notranslate nohighlight">\(x^i\)</span>, this decomposition, along with the chain-rule, expresses</p>
+<div class="math notranslate nohighlight">
+\[\dot{Q}(\tau) = \frac{\text{d}Q^i}{\text{d}\tau} \frac{\partial}{\partial x^i} (Q (\tau) ).\]</div>
+<div class="toggle docutils container">
+<p>For example, <span class="math notranslate nohighlight">\(n=2\)</span> in Cartesian coordinates:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\dot{Q}(\tau) &amp;= \frac{\text{d}Q^1}{\text{d}\tau} \frac{\partial}{\partial x^1} (Q (\tau) ) + \frac{\text{d}Q^2}{\text{d}\tau} \frac{\partial}{\partial x^2} (Q (\tau) ), \\
+&amp;= \frac{\text{d}Q^1}{\text{d}\tau} \left( Q(\tau), \left( \frac{ \partial Q(\tau) }{ \partial x^1 }, 0 \right) \right) + \frac{\text{d}Q^2}{\text{d}\tau} \left( Q(\tau), \left( 0, \frac{ \partial Q(\tau) }{ \partial x^2 } \right) \right), \\
+&amp;= \left( Q(\tau), \left( \frac{\text{d}Q^1}{\text{d}\tau} \frac{ \partial Q(\tau) }{ \partial x^1 }, \frac{\text{d}Q^2}{\text{d}\tau} \frac{ \partial Q(\tau) }{ \partial x^2 } \right) \right) \in T_{Q(\tau)} \mathscr{U}.\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="connecting-tangent-spaces-with-contra-and-covariant-vectors">
+<h2><span class="section-number">2.2.4. </span>Connecting tangent spaces with contra- and covariant vectors<a class="headerlink" href="#connecting-tangent-spaces-with-contra-and-covariant-vectors" title="Permalink to this headline">¶</a></h2>
+<p>We have encountered the notion of a <em>contravariant vector</em> in defining tangent vectors, considered as <em>directional derivatives</em> with respect to a frame. The space of <em>contravariant</em> vectors may be thought of as the space of all directions (the tangent space) at a point <span class="math notranslate nohighlight">\(x \in \mathscr{U}\)</span>. On the other hand, <em>covariant</em> vectors, sometimes called <em>cotangents</em>, are linear mappings</p>
+<div class="math notranslate nohighlight">
+\[\phi : \ \  T_x \mathscr{U} \rightarrow \mathbb{R}.\]</div>
+<p>We will later identify these maps with the far broader concept of <em>differential forms</em> (see <a class="reference internal" href="forms.html#sec-diff-forms"><span class="std std-ref">Forms</span></a>), and covariant vectors specifically as <em>one-forms</em>, but for now, we will consider them as the <em>dual space</em> of the tangent space <span class="math notranslate nohighlight">\(T_x \mathscr{U}\)</span> , often denoted as <span class="math notranslate nohighlight">\(T^\ast_x \mathscr{U}\)</span> or <span class="math notranslate nohighlight">\(\Lambda^1 T_x \mathscr{U}\)</span>. We will write the basis of the cotangent space <span class="math notranslate nohighlight">\(\beta^i\)</span>, with the decomposition</p>
+<div class="math notranslate nohighlight">
+\[\phi = \phi_i \beta^i,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi_i \in \mathbb{R}\)</span>.</p>
+<p>From our knowledge of vector spaces, we may already observe</p>
+<div class="math notranslate nohighlight" id="equation-eq-bases-relation">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-bases-relation" title="Permalink to this equation">¶</a></span>\[\beta^i(b_j) = \delta^i_{\phantom{i}j},\]</div>
+<p>and therefore identify the transformation between dual bases as</p>
+<div class="math notranslate nohighlight" id="equation-eq-dual-basis-transform">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-dual-basis-transform" title="Permalink to this equation">¶</a></span>\[\beta^{\prime i} = \gamma^i_{\phantom{i} j} \beta^j,\]</div>
+<p>where the matrix <span class="math notranslate nohighlight">\(\gamma\)</span> is the inverse of the <span class="math notranslate nohighlight">\(\gamma^{-1}\)</span> seen in eq. <a class="reference internal" href="#equation-eq-basis-transform">(2.3)</a>, which can be easily verified with eq. <a class="reference internal" href="#equation-eq-bases-relation">(2.4)</a>.</p>
+<div class="notation admonition">
+<p class="admonition-title">Notation</p>
+<p>There exists often some confusion over the use of the terminology <em>covariant</em> and <em>contravariant</em>, and how it relates to the symbols we discuss. In physics, these words describe how the vector components change when the basis changes.</p>
+<p>For example, the vector</p>
+<div class="math notranslate nohighlight">
+\[v = v^i b_i,\]</div>
+<p>is a <em>contravariant</em> vector; were the length of the basis <span class="math notranslate nohighlight">\(b_i\)</span> doubled, the vector components would have to be halved, changing in the opposite (contra-) direction. We can then express the <em>covariant</em> vector through</p>
+<div class="math notranslate nohighlight">
+\[v_i = v \cdot b_i,\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[v = v_i \beta^i,\]</div>
+<p>where it is apparent that the covariant vector varies along with (co-) the basis <span class="math notranslate nohighlight">\(b_i\)</span>.</p>
+</div>
+</div>
+<div class="section" id="tensors">
+<h2><span class="section-number">2.2.5. </span>Tensors<a class="headerlink" href="#tensors" title="Permalink to this headline">¶</a></h2>
+<p>Given a point <span class="math notranslate nohighlight">\(x\)</span> in an open subspace <span class="math notranslate nohighlight">\(\mathscr{U} \subset \mathbb{R}^n\)</span>, with tensor space <span class="math notranslate nohighlight">\(T_x \mathscr{U}\)</span> and cotangent space <span class="math notranslate nohighlight">\(T^\ast_x \mathscr{U}\)</span>, we may define the cartesian product</p>
+<div class="math notranslate nohighlight">
+\[\Pi^s_{\phantom{s}r}
+    = 
+    \underbrace{
+        \left( T^\ast_x \mathscr{U} \right) \times \dots \times \left( T^\ast_x \mathscr{U} \right)
+    }_{r \ \text{many}}
+    \times 
+    \underbrace{
+        \left( T_x \mathscr{U} \right) \times \dots \times \left( T_x \mathscr{U} \right)
+    }_{s \ \text{many}}.\]</div>
+<p>We then define a <em>tensor</em> of type <span class="math notranslate nohighlight">\((r, s)\)</span> as the map</p>
+<div class="math notranslate nohighlight">
+\[T:
+    \Pi^s_{\phantom{s}r}
+    \rightarrow
+    \mathbb{R}.\]</div>
+<p>The maps <span class="math notranslate nohighlight">\(T\)</span> are said to be <em>multilinear</em>, i.e. linear in each argument, and span a vector-space of dimension <span class="math notranslate nohighlight">\(n^{r+s}\)</span>.</p>
+<div class="admonition-definition-tensor-space admonition">
+<p class="admonition-title">Definition: Tensor space</p>
+<p>The space of tensors is the space of <em>tensor products</em>, at a point <span class="math notranslate nohighlight">\(x \in \mathscr{U}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\Theta^r_{\phantom{r}s} =
+    \underbrace{
+        \left (T_{x} \mathscr{U} \right) \otimes \dots \otimes \left (T_{x} \mathscr{U} \right)
+    }_{r \ \text{many}}
+    \otimes
+    \underbrace{
+        \left (T^\ast_{x} \mathscr{U} \right) \otimes \dots \otimes \left (T^\ast_{x} \mathscr{U} \right)
+    }_{s \ \text{many}}.\]</div>
+</div>
+<p>We can identify the basis of a tensor in the tensor space by considering the action of the map <span class="math notranslate nohighlight">\(T\)</span> for <span class="math notranslate nohighlight">\(\phi^i \in T^\ast_x \mathscr{U}\)</span> and <span class="math notranslate nohighlight">\(\dot{x}^i \in T_x \mathscr{U}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(\phi^1, ..., \phi^r, \dot{x}_1, \dots, \dot{x}_s)
+    &amp; =
+    T(
+        \phi^1_{\phantom{1}i_1} \beta^{i_1}, \dots, \phi^r_{\phantom{r}i_r} \beta^{i_r}, 
+        \dot{x}_1^{\phantom{1}j_1} b_{j_1}, \dots, \dot{x}_s^{\phantom{s}j_s} b_{j_s}
+    ) \\
+    &amp; = 
+    \phi^1_{\phantom{1}i_1}, \dots, \phi^r_{\phantom{r}i_r}, \dot{x}_1^{\phantom{1}j_1} \dots, \dot{x}_s^{\phantom{s}j_s}
+    T(
+        \beta^{i_1}, \dots, \beta^{i_r}, b_{j_1}, \dots, b_{j_s}
+    ),\end{split}\]</div>
+<p>letting</p>
+<div class="math notranslate nohighlight">
+\[T(
+    \beta^{i_1}, \dots, \beta^{i_r}, b_{j_1}, \dots, b_{j_s}
+) =
+T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s},\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-tensor-basis">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-tensor-basis" title="Permalink to this equation">¶</a></span>\[e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}
+\left(
+    \beta^{k_1}, \dots, \beta^{k_r}, b_{l_1}, \dots, b_{l_s}
+\right)
+=
+{
+    \delta^{k_1}_{\phantom{k_1} i_1}
+    \dots
+    \delta^{k_r}_{\phantom{k_r} i_r}
+    \delta^{j_1}_{\phantom{j_1} l_1}
+    \dots
+    \delta^{j_s}_{\phantom{j_s} l_s}
+},\]</div>
+<p>allows the identification of the decomposition of <span class="math notranslate nohighlight">\(T\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[T = T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} .\]</div>
+<p>The <span class="math notranslate nohighlight">\(e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}\)</span> are linearly independent, necessitated by eq. <a class="reference internal" href="#equation-eq-tensor-basis">(2.6)</a>, they provide a basis for tensors of type <span class="math notranslate nohighlight">\((r, s)\)</span>. Similarly, it should be apparent that the form of this basis is the direct product</p>
+<div class="math notranslate nohighlight">
+\[e_{i_1, \dots, i_r}^{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} 
+=
+b_{i_1} \otimes \dots \otimes b_{i_r} \otimes \beta^{j_1} \otimes \dots \otimes \beta^{j_s}.\]</div>
+<p>The <span class="math notranslate nohighlight">\(T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s} \in \mathbb{R}\)</span> are the components of the tensor relative to the chosen basis. The change of basis for the basis vectors of a tensor follows from eq. <a class="reference internal" href="#equation-eq-basis-transform">(2.3)</a> and eq. <a class="reference internal" href="#equation-eq-dual-basis-transform">(2.5)</a>, which implies the transformation of the components</p>
+<div class="math notranslate nohighlight">
+\[T^{i^\prime_1, \dots, i^\prime_r}_{\phantom{i^\prime_1, \dots, i^\prime_r} j^\prime_1, \dots, j^\prime_s}
+= {
+    \left( \gamma^{-1} \right)^{i^\prime_1}_{\phantom{i^\prime_1}i_1}
+    \dots
+    \left( \gamma^{-1} \right)^{i^\prime_r}_{\phantom{i^\prime_r}i_r}
+    \gamma^{j_1}_{\phantom{j_1}j^\prime_1}
+    \dots
+    \gamma^{j_s}_{\phantom{j_s}j^\prime_s}
+}
+T^{i_1, \dots, i_r}_{\phantom{i_1, \dots, i_r} j_1, \dots, j_s}.\]</div>
+<div class="section" id="tensor-symmetry">
+<span id="sec-tensory-symmetry"></span><h3><span class="section-number">2.2.5.1. </span>Tensor symmetry<a class="headerlink" href="#tensor-symmetry" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-definition-symmetric-or-antisymmetric-tensor admonition">
+<p class="admonition-title">Definition: symmetric or antisymmetric tensor</p>
+<p>A tensor of type <span class="math notranslate nohighlight">\((r, s)\)</span> is said to be <em>symmetric</em> or <em>antisymmetric</em> in its <em>contravariant</em> indices if under the exchange of indices</p>
+<div class="math notranslate nohighlight">
+\[T^{i_1, \dots, i_l, \dots, i_m, \dots,  i_r}_{\phantom{i_1, \dots, i_l, \dots, i_m, \dots,  i_r} j_1, \dots, j_s}
+    =
+    \pm T^{i_1, \dots, i_m, \dots, i_l, \dots,  i_r}_{\phantom{i_1, \dots, i_m, \dots, i_l, \dots,  i_r} j_1, \dots, j_s},\]</div>
+<p>The same property may apply to the <em>covariant</em> indices.</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="notation admonition">
+<p class="admonition-title">Notation</p>
+<p>There is no difference between <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(s\)</span>, however we will differentiate the class of <em><span class="math notranslate nohighlight">\((0, s)\)</span> tensors</em> from the class of <em>totally antisymmetric <span class="math notranslate nohighlight">\((0, s)\)</span> tensors</em> by denoting the latter as the class of <span class="math notranslate nohighlight">\((0, p)\)</span> tensors.</p>
+</div>
+</div>
+<p>The special class of <em>totally antisymmetric tensors</em> are the <span class="math notranslate nohighlight">\((0, p)\)</span> covariant tensors, which are antisymmetric under every exchange of indices. That is</p>
+<div class="math notranslate nohighlight">
+\[T_{i_1, \dots, i_l, \dots, i_m, \dots, i_p} 
+    = 
+    - T_{i_1, \dots, i_m, \dots, i_l, \dots, i_p}.\]</div>
+<p>Any <span class="math notranslate nohighlight">\((0, s)\)</span> tensor may be made totally antisymmetric by applying an alternating operator <span class="math notranslate nohighlight">\(\mathcal{A}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\mathcal{A} T_{i_1, \dots, i_p} 
+    = 
+    \frac{1}{p!} \sum_{\pi \in S_p} \text{sgn}(\pi) \ T_{\pi(i_1), \dots, \pi(i_p)},\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_p\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Symmetric_group">set of <span class="math notranslate nohighlight">\(p\)</span> permutations (Wikipedia)</a>.</p>
+<p>The properties of this operator are</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{A} T = T\)</span> if <span class="math notranslate nohighlight">\(T\)</span> already totally antisymmetric,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{A} T_{i_1, \dots, i_p} = 0 \ \forall \ p &gt; n\)</span>.</p></li>
+</ul>
+<p>These totally antisymmetric tensors are called <span class="math notranslate nohighlight">\(p\)</span><em>-forms</em>, and will be the subject of study in the next section.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./diff-geo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="manifolds.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.1. </span>Manifolds</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="forms.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.3. </span>Forms</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Fergus Baker<br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            <div>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> This book is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 License</a>.
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
